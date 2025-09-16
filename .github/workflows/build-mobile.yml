@@ -1,0 +1,63 @@
+name: Build Mobile Artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  android:
+    name: Android APK & AAB
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.35.1'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build APK (release)
+        run: flutter build apk --release
+      - name: Build AAB (release)
+        run: flutter build appbundle --release
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: build/app/outputs/flutter-apk/*.apk
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-aab
+          path: build/app/outputs/bundle/release/*.aab
+
+  ios:
+    name: iOS IPA (unsigned)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.35.1'
+      - name: Install CocoaPods
+        run: |
+          sudo gem install cocoapods --no-document
+      - name: Flutter pub get
+        run: flutter pub get
+      - name: Pod install
+        working-directory: ios
+        run: |
+          pod repo update
+          pod install
+      - name: Build iOS (no codesign)
+        run: |
+          flutter build ipa --no-codesign
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-ipa-unsigned
+          path: build/ios/ipa/*.ipa

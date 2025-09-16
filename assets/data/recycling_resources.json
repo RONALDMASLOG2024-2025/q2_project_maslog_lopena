@@ -1,0 +1,63 @@
+{
+  "local": [
+    {
+      "name": "Edispo",
+      "description": "A Philippine-based e-waste disposal app that connects users with collection points and recycling partners for proper electronic waste management.",
+      "link": "https://edispo.com"
+    },
+    {
+      "name": "Envirocycle",
+      "description": "Davao-based electronics recycling company offering responsible disposal and recovery services for e-waste, batteries, and IT assets.",
+      "link": "https://envirocycleph.com"
+    }
+  ],
+  "national": [
+    {
+      "name": "Globe E-Waste Zero",
+      "description": "A nationwide program by Globe Telecom that provides drop-off bins for e-waste in malls and partner locations, promoting responsible disposal and recycling.",
+      "link": "https://www.globe.com.ph/about-us/sustainability/environment/e-waste-zero-bins"
+    },
+    {
+      "name": "DENR E-Waste Management Program",
+      "description": "The Department of Environment and Natural Resources (DENR) in the Philippines oversees programs and policies for e-waste management, collection drives, and awareness campaigns.",
+      "link": "https://www.denr.gov.ph"
+    },
+    {
+      "name": "SM Cares E-Waste Collection",
+      "description": "SM Supermalls’ CSR initiative that provides designated collection points nationwide where people can drop off their e-waste safely.",
+      "link": "https://www.smcares.com.ph/programs/environment"
+    }
+  ],
+  "international": [
+    {
+      "name": "ERI (Electronic Recyclers International)",
+      "description": "One of the world’s largest e-waste recyclers based in the US, ERI partners with companies and communities to provide secure, environmentally responsible recycling.",
+      "link": "https://eridirect.com"
+    },
+    {
+      "name": "Sims Lifecycle Services",
+      "description": "Global leader in IT asset disposition, data center decommissioning, and electronics recycling with facilities worldwide.",
+      "link": "https://www.simslifecycle.com"
+    },
+    {
+      "name": "ATRenew (Aihuishou)",
+      "description": "China-based platform specializing in trade-in and recycling of used electronics, offering cash rewards and a large collection network.",
+      "link": "https://www.atrenew.com"
+    },
+    {
+      "name": "PCs for People",
+      "description": "A US-based nonprofit that refurbishes donated computers and provides low-cost devices and internet to underserved communities while recycling e-waste.",
+      "link": "https://www.pcsforpeople.org"
+    },
+    {
+      "name": "e-Stewards",
+      "description": "A global certification program and network of certified recyclers ensuring responsible e-waste recycling and offering a map of certified drop-off locations.",
+      "link": "https://www.e-stewards.org"
+    },
+    {
+      "name": "Earth911 Recycling Search",
+      "description": "A US-based platform that helps users find nearby recycling centers for electronics and other waste, with an extensive searchable map database.",
+      "link": "https://search.earth911.com"
+    }
+  ]
+}
