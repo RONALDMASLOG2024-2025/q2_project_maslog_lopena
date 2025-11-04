@@ -1,37 +1,57 @@
-{
+﻿{
   "local": [
     {
-      "name": "Edispo",
-      "description": "A Philippine-based e-waste disposal app that connects users with collection points and recycling partners for proper electronic waste management.",
-      "link": "https://edispo.com"
+      "name": "Manila Recycling Center",
+      "description": "Local community recycling center in Metro Manila accepting electronics, batteries, and household items. Provides free pickup for large items.",
+      "link": "https://www.manila.gov.ph/services/solid-waste-management/"
     },
     {
-      "name": "Envirocycle",
+      "name": "Quezon City E-Waste Collection",
+      "description": "QC government program offering quarterly e-waste collection drives and permanent drop-off points at barangay halls.",
+      "link": "https://quezoncity.gov.ph/e-waste-management/"
+    },
+    {
+      "name": "Makati City EcoHub",
+      "description": "Makati environmental hub with e-waste drop-off, repair cafes, and electronics refurbishment programs for local communities.",
+      "link": "https://www.makati.gov.ph/portal/main/content/environment"
+    },
+    {
+      "name": "Envirocycle Davao",
       "description": "Davao-based electronics recycling company offering responsible disposal and recovery services for e-waste, batteries, and IT assets.",
-      "link": "https://envirocycleph.com"
+      "link": "https://www.facebook.com/envirocycleph"
     }
   ],
   "national": [
     {
       "name": "Globe E-Waste Zero",
-      "description": "A nationwide program by Globe Telecom that provides drop-off bins for e-waste in malls and partner locations, promoting responsible disposal and recycling.",
-      "link": "https://www.globe.com.ph/about-us/sustainability/environment/e-waste-zero-bins"
+      "description": "Nationwide program by Globe Telecom providing drop-off bins for e-waste in malls and partner locations.",
+      "link": "https://www.globe.com.ph/about-us/sustainability/environment.html"
     },
     {
-      "name": "DENR E-Waste Management Program",
-      "description": "The Department of Environment and Natural Resources (DENR) in the Philippines oversees programs and policies for e-waste management, collection drives, and awareness campaigns.",
+      "name": "DENR E-Waste Management",
+      "description": "Department of Environment and Natural Resources oversees programs and policies for e-waste management and collection drives.",
       "link": "https://www.denr.gov.ph"
     },
     {
       "name": "SM Cares E-Waste Collection",
-      "description": "SM Supermalls’ CSR initiative that provides designated collection points nationwide where people can drop off their e-waste safely.",
-      "link": "https://www.smcares.com.ph/programs/environment"
+      "description": "SM Supermalls CSR initiative providing designated collection points nationwide for safe e-waste drop-off.",
+      "link": "https://www.smsupermalls.com/sustainability"
+    },
+    {
+      "name": "Ayala Malls Green Initiatives",
+      "description": "Ayala Malls nationwide program with e-waste bins and regular collection drives at major mall locations.",
+      "link": "https://www.ayalamalls.com/sustainability"
+    },
+    {
+      "name": "PLDT-Smart E-Waste Program",
+      "description": "Telecom initiative providing collection points at retail stores and service centers nationwide for mobile phones and accessories.",
+      "link": "https://smart.com.ph/About/sustainability/environment"
     }
   ],
   "international": [
     {
-      "name": "ERI (Electronic Recyclers International)",
-      "description": "One of the world’s largest e-waste recyclers based in the US, ERI partners with companies and communities to provide secure, environmentally responsible recycling.",
+      "name": "ERI Electronic Recyclers",
+      "description": "One of the world's largest e-waste recyclers, partnering with companies and communities for secure environmentally responsible recycling.",
       "link": "https://eridirect.com"
     },
     {
@@ -40,24 +60,34 @@
       "link": "https://www.simslifecycle.com"
     },
     {
-      "name": "ATRenew (Aihuishou)",
-      "description": "China-based platform specializing in trade-in and recycling of used electronics, offering cash rewards and a large collection network.",
-      "link": "https://www.atrenew.com"
+      "name": "Best Buy Recycling",
+      "description": "Free electronics recycling at all US Best Buy stores. Accepts TVs, computers, phones, cables, and most electronics.",
+      "link": "https://www.bestbuy.com/site/services/recycling/pcmcat149900050025.c"
     },
     {
-      "name": "PCs for People",
-      "description": "A US-based nonprofit that refurbishes donated computers and provides low-cost devices and internet to underserved communities while recycling e-waste.",
-      "link": "https://www.pcsforpeople.org"
+      "name": "Apple Trade In",
+      "description": "Global program to trade in or recycle Apple devices. Get credit for eligible devices or free recycling for all Apple products.",
+      "link": "https://www.apple.com/shop/trade-in"
     },
     {
-      "name": "e-Stewards",
-      "description": "A global certification program and network of certified recyclers ensuring responsible e-waste recycling and offering a map of certified drop-off locations.",
-      "link": "https://www.e-stewards.org"
+      "name": "Dell Reconnect",
+      "description": "Partnership with Goodwill providing free computer and accessory recycling at Goodwill donation centers across North America.",
+      "link": "https://www.dell.com/learn/us/en/uscorp1/corp-comm/goodwill-reconnect"
+    },
+    {
+      "name": "e-Stewards Certified",
+      "description": "Global certification program and network of certified recyclers ensuring responsible e-waste recycling with a map of drop-off locations.",
+      "link": "https://e-stewards.org"
     },
     {
       "name": "Earth911 Recycling Search",
-      "description": "A US-based platform that helps users find nearby recycling centers for electronics and other waste, with an extensive searchable map database.",
-      "link": "https://search.earth911.com"
+      "description": "US-based platform helping users find nearby recycling centers for electronics and other waste with searchable map database.",
+      "link": "https://earth911.com"
+    },
+    {
+      "name": "Google Sustainability",
+      "description": "Google's global electronics recycling and trade-in programs for Pixel devices and Chromebooks with mail-in and partner drop-off options.",
+      "link": "https://sustainability.google/commitments/"
     }
   ]
 }

@@ -5,16 +5,16 @@ import 'core/design/design_system.dart';
 import 'data/models/eco_tip.dart';
 import 'features/common/widgets/eco_app_bar.dart';
 import 'features/common/widgets/eco_nav_bar.dart';
+import 'features/common/widgets/static_grid_bubbles_background.dart';
+import 'features/progress/domain/progress_provider.dart';
+import 'features/progress/domain/streak_provider.dart' show completeTodayProvider, isTodayCompletedProvider;
 import 'features/progress/presentation/progress_screen.dart';
-import 'features/progress/application/progress_providers.dart';
-import 'features/resources/recycling_directory_screen.dart';
-import 'features/tips/application/daily_tip_provider.dart';
-import 'features/tips/presentation/widgets/daily_tip_card_modern.dart';
-import 'features/habit/presentation/streak_provider.dart' show completeTodayProvider;
+import 'features/recycling/presentation/recycling_directory_screen.dart';
+import 'features/settings/domain/settings_provider.dart';
+import 'features/settings/presentation/settings_screen.dart';
+import 'features/tips/domain/tip_provider.dart';
 import 'features/tips/presentation/widgets/daily_tip_card.dart' show TipSkeleton;
-import 'settings/settings_provider.dart';
-import 'settings/settings_screen.dart';
-import 'features/onboarding/widgets/web_wires_background.dart';
+import 'features/tips/presentation/widgets/daily_tip_card_modern.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -30,14 +30,19 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (i) => setState(() => _index = i),
-        children: const [
-          DailyTipScreen(),
-          ProgressScreen(),
-          RecyclingDirectoryScreen(),
-          SettingsScreen(),
+      body: Stack(
+        children: [
+          const Positioned.fill(child: IgnorePointer(child: StaticGridBubblesBackground())),
+          PageView(
+            controller: _pageController,
+            onPageChanged: (i) => setState(() => _index = i),
+            children: const [
+              DailyTipScreen(),
+              ProgressScreen(),
+              RecyclingDirectoryScreen(),
+              SettingsScreen(),
+            ],
+          ),
         ],
       ),
       bottomNavigationBar: EcoNavBar(
@@ -69,7 +74,7 @@ class DailyTipScreen extends ConsumerStatefulWidget {
 }
 
 class _DailyTipScreenState extends ConsumerState<DailyTipScreen> {
-  String? _explanation;
+  final Map<String, String?> _explanations = {}; // Store explanations per tip ID
   late final PageController _feedController = PageController(viewportFraction: 0.86);
 
   String _fallbackWhy(EcoTipCategory c, String text) {
@@ -94,21 +99,7 @@ class _DailyTipScreenState extends ConsumerState<DailyTipScreen> {
       appBar: const EcoAppBar(title: 'GreenWise Tip'),
       body: Stack(
         children: [
-          if (!settings.reduceMotion)
-            const Positioned.fill(
-              child: IgnorePointer(
-                child: WebWiresBackground(
-                  nodeCount: 28,
-                  neighborCount: 3,
-                  opacity: 0.08,
-                  lineWidthMin: 0.8,
-                  lineWidthMax: 1.6,
-                  nodeMin: 1.8,
-                  nodeMax: 3.2,
-                  driftUpPerSecond: 0.01,
-                ),
-              ),
-            ),
+          const Positioned.fill(child: IgnorePointer(child: StaticGridBubblesBackground())),
           Positioned.fill(
             child: feedAsync.when(
               data: (tips) {
@@ -143,88 +134,244 @@ class _DailyTipScreenState extends ConsumerState<DailyTipScreen> {
                           final delta = (index - page);
                           final scale = (1 - (delta.abs() * 0.08)).clamp(0.92, 1.0);
                           final opacity = (1 - (delta.abs() * 0.35)).clamp(0.0, 1.0);
-                          return Center(
-                            child: Opacity(
-                              opacity: opacity,
-                              child: Transform.scale(
-                                scale: scale,
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: GWDs.s7),
-                                  child: index == 0
-                                      ? Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            DailyTipCardModern(
-                                              tip: t,
-                                              reduceMotion: settings.reduceMotion,
-                                            ),
+                          return RepaintBoundary(
+                            child: Center(
+                              child: Opacity(
+                                opacity: opacity,
+                                child: Transform.scale(
+                                  scale: scale,
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: GWDs.s7),
+                                    child: index == 0
+                                        ? Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              RepaintBoundary(
+                                                child: DailyTipCardModern(
+                                                  tip: t,
+                                                  reduceMotion: settings.reduceMotion,
+                                                ),
+                                              ),
                                             SizedBox(height: GWDs.s4),
-                                            Row(
-                                              children: [
-                                                Expanded(
-                                                  child: ElevatedButton.icon(
-                                                    onPressed: () async {
-                                                      await ref
-                                                          .read(completeTodayProvider.future)
-                                                          .catchError((_) {});
-                                                      ref.invalidate(dailyTipProvider);
-                                                      // Refresh the infinite feed from today
-                                                      await feedCtrl.reset();
-                                                      ref.invalidate(recentCompletionsProvider);
-                                                      ref.invalidate(weeklyCompletionProvider);
-                                                      ref.invalidate(last30StatsProvider);
-                                                      ref.invalidate(weeklyDaysProvider);
-                                                    },
-                                                    icon: const Icon(
-                                                      Icons.check_circle_rounded,
-                                                      size: 20,
-                                                    ),
-                                                    label: const Text('Mark as done'),
-                                                    style: ElevatedButton.styleFrom(
-                                                      elevation: 0,
-                                                      padding: const EdgeInsets.symmetric(
-                                                        vertical: 14,
-                                                        horizontal: 12,
+                                            // Check if today is completed to disable the button
+                                            Consumer(
+                                              builder: (context, ref, child) {
+                                                final isTodayCompleted = ref.watch(isTodayCompletedProvider);
+                                                return isTodayCompleted.when(
+                                                  data: (isCompleted) => Row(
+                                                    children: [
+                                                      Expanded(
+                                                        child: ElevatedButton.icon(
+                                                          onPressed: isCompleted ? null : () async {
+                                                            await ref
+                                                                .read(completeTodayProvider.future)
+                                                                .catchError((_) {});
+                                                            ref.invalidate(dailyTipProvider);
+                                                            // Refresh the infinite feed from today
+                                                            await feedCtrl.reset();
+                                                            ref.invalidate(recentCompletionsProvider);
+                                                            ref.invalidate(weeklyCompletionProvider);
+                                                            ref.invalidate(last30StatsProvider);
+                                                            ref.invalidate(weeklyDaysProvider);
+                                                          },
+                                                          icon: Icon(
+                                                            isCompleted ? Icons.check_circle : Icons.check_circle_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: Text(isCompleted ? 'Completed!' : 'Mark as done'),
+                                                          style: const ButtonStyle(
+                                                            elevation: WidgetStatePropertyAll(0),
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
                                                       ),
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius: BorderRadius.circular(16),
+                                                      SizedBox(width: GWDs.s3),
+                                                      Expanded(
+                                                        child: OutlinedButton.icon(
+                                                          onPressed: () {
+                                                            final local = t.explanation;
+                                                            setState(() {
+                                                              final currentExplanation = _explanations[t.id];
+                                                              _explanations[t.id] = (currentExplanation == null)
+                                                                  ? ((local?.trim().isNotEmpty == true)
+                                                                      ? local
+                                                                      : _fallbackWhy(
+                                                                          t.category, t.text))
+                                                                  : null;
+                                                            });
+                                                          },
+                                                          icon: const Icon(
+                                                            Icons.info_outline_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: const Text('Why it matters'),
+                                                          style: const ButtonStyle(
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
                                                       ),
-                                                    ),
+                                                    ],
                                                   ),
-                                                ),
-                                                SizedBox(width: GWDs.s3),
-                                                Expanded(
-                                                  child: OutlinedButton.icon(
-                                                    onPressed: () {
-                                                      final local = t.explanation;
-                                                      setState(() {
-                                                        _explanation = (_explanation == null)
-                                                            ? ((local?.trim().isNotEmpty == true)
-                                                                ? local
-                                                                : _fallbackWhy(
-                                                                    t.category, t.text))
-                                                            : null;
-                                                      });
-                                                    },
-                                                    icon: const Icon(
-                                                      Icons.info_outline_rounded,
-                                                      size: 20,
-                                                    ),
-                                                    label: const Text('Why it matters'),
-                                                    style: OutlinedButton.styleFrom(
-                                                      padding: const EdgeInsets.symmetric(
-                                                        vertical: 14,
-                                                        horizontal: 12,
+                                                  loading: () => Row(
+                                                    children: [
+                                                      Expanded(
+                                                        child: ElevatedButton.icon(
+                                                          onPressed: null,
+                                                          icon: const Icon(
+                                                            Icons.check_circle_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: const Text('Loading...'),
+                                                          style: const ButtonStyle(
+                                                            elevation: WidgetStatePropertyAll(0),
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
                                                       ),
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius: BorderRadius.circular(16),
+                                                      SizedBox(width: GWDs.s3),
+                                                      Expanded(
+                                                        child: OutlinedButton.icon(
+                                                          onPressed: () {
+                                                            final local = t.explanation;
+                                                            setState(() {
+                                                              final currentExplanation = _explanations[t.id];
+                                                              _explanations[t.id] = (currentExplanation == null)
+                                                                  ? ((local?.trim().isNotEmpty == true)
+                                                                      ? local
+                                                                      : _fallbackWhy(
+                                                                          t.category, t.text))
+                                                                  : null;
+                                                            });
+                                                          },
+                                                          icon: const Icon(
+                                                            Icons.info_outline_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: const Text('Why it matters'),
+                                                          style: const ButtonStyle(
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
                                                       ),
-                                                    ),
+                                                    ],
                                                   ),
-                                                ),
-                                              ],
+                                                  error: (err, stack) => Row(
+                                                    children: [
+                                                      Expanded(
+                                                        child: ElevatedButton.icon(
+                                                          onPressed: () async {
+                                                            await ref
+                                                                .read(completeTodayProvider.future)
+                                                                .catchError((_) {});
+                                                            ref.invalidate(dailyTipProvider);
+                                                            await feedCtrl.reset();
+                                                            ref.invalidate(recentCompletionsProvider);
+                                                            ref.invalidate(weeklyCompletionProvider);
+                                                            ref.invalidate(last30StatsProvider);
+                                                            ref.invalidate(weeklyDaysProvider);
+                                                          },
+                                                          icon: const Icon(
+                                                            Icons.check_circle_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: const Text('Mark as done'),
+                                                          style: const ButtonStyle(
+                                                            elevation: WidgetStatePropertyAll(0),
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      SizedBox(width: GWDs.s3),
+                                                      Expanded(
+                                                        child: OutlinedButton.icon(
+                                                          onPressed: () {
+                                                            final local = t.explanation;
+                                                            setState(() {
+                                                              final currentExplanation = _explanations[t.id];
+                                                              _explanations[t.id] = (currentExplanation == null)
+                                                                  ? ((local?.trim().isNotEmpty == true)
+                                                                      ? local
+                                                                      : _fallbackWhy(
+                                                                          t.category, t.text))
+                                                                  : null;
+                                                            });
+                                                          },
+                                                          icon: const Icon(
+                                                            Icons.info_outline_rounded,
+                                                            size: 20,
+                                                          ),
+                                                          label: const Text('Why it matters'),
+                                                          style: const ButtonStyle(
+                                                            padding: WidgetStatePropertyAll(
+                                                              EdgeInsets.symmetric(
+                                                                vertical: 14,
+                                                                horizontal: 12,
+                                                              ),
+                                                            ),
+                                                            shape: WidgetStatePropertyAll(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                );
+                                              },
                                             ),
-                                            if (_explanation != null && _explanation!.isNotEmpty) ...[
+                                            if (_explanations[t.id] != null && _explanations[t.id]!.isNotEmpty) ...[
                                               SizedBox(height: GWDs.s3),
                                               Container(
                                                 padding: const EdgeInsets.all(16),
@@ -242,17 +389,20 @@ class _DailyTipScreenState extends ConsumerState<DailyTipScreen> {
                                                   ),
                                                 ),
                                                 child: Text(
-                                                  _explanation!,
+                                                  _explanations[t.id]!,
                                                   style: Theme.of(context).textTheme.bodyMedium,
                                                 ),
                                               ),
                                             ],
                                           ],
                                         )
-                                      : DailyTipCardModern(
-                                          tip: t,
-                                          reduceMotion: settings.reduceMotion,
+                                      : RepaintBoundary(
+                                          child: DailyTipCardModern(
+                                            tip: t,
+                                            reduceMotion: settings.reduceMotion,
+                                          ),
                                         ),
+                                  ),
                                 ),
                               ),
                             ),

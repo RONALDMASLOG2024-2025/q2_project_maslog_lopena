@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../../core/design/design_system.dart';
 import '../../../../data/models/eco_tip.dart';
 
@@ -70,20 +71,34 @@ class _DailyTipCardModernState extends State<DailyTipCardModern>
     final cs = theme.colorScheme;
     final category = _label(widget.tip.category);
     final badgeColor = _categoryColor(widget.tip.category, cs);
+    final source = widget.tip.source;
+    
+    // Build accessibility label
+    final sourceLabel = (source != null && source != 'AI-Generated')
+        ? ' Verified source: $source.'
+        : '';
+    final accessibilityLabel = '${widget.tip.text}. Category: $category.$sourceLabel';
 
     return AnimatedBuilder(
       animation: _c,
-      builder: (context, _) {
+      builder: (context, child) {
         final t = Curves.easeOutCubic.transform(_c.value);
         final slide = (1 - t) * 18;
-        return Opacity(
-          opacity: t,
-          child: Transform.translate(
-            offset: Offset(0, slide),
-            child: _QuoteStyleCard(
-              text: widget.tip.text,
-              categoryLabel: category,
-              badgeColor: badgeColor,
+        return Semantics(
+          label: accessibilityLabel,
+          readOnly: true,
+          child: Opacity(
+            opacity: t,
+            child: Transform.translate(
+              offset: Offset(0, slide),
+              child: RepaintBoundary(
+                child: _QuoteStyleCard(
+                  text: widget.tip.text,
+                  categoryLabel: category,
+                  badgeColor: badgeColor,
+                  source: source,
+                ),
+              ),
             ),
           ),
         );
@@ -96,10 +111,12 @@ class _QuoteStyleCard extends StatelessWidget {
   final String text;
   final String categoryLabel;
   final Color badgeColor;
+  final String? source;
   const _QuoteStyleCard({
     required this.text,
     required this.categoryLabel,
     required this.badgeColor,
+    this.source,
   });
 
   @override
@@ -212,6 +229,85 @@ class _QuoteStyleCard extends StatelessWidget {
                     style: theme.textTheme.labelLarge?.copyWith(
                       fontWeight: FontWeight.w700,
                       letterSpacing: .2,
+                    ),
+                  ),
+                ),
+                // Source attribution badge
+                if (source != null && source != 'AI-Generated') ...[
+                  const SizedBox(height: 10),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: cs.primaryContainer.withValues(alpha: 0.90),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: cs.primary.withValues(alpha: 0.25),
+                        width: 1.5,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.verified,
+                          size: 16,
+                          color: cs.primary,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          source!,
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: cs.onPrimaryContainer,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+                // Share button
+                const SizedBox(height: 16),
+                Semantics(
+                  button: true,
+                  label: 'Share this eco tip',
+                  child: InkWell(
+                    onTap: () {
+                      final sourceText = source != null && source != 'AI-Generated'
+                          ? '\n\n📚 Source: $source'
+                          : '';
+                      Share.share(
+                        '🌱 $text$sourceText\n\nJoin me on GreenWise - Daily eco-tips for sustainable electronics!',
+                        subject: 'GreenWise Eco Tip',
+                      );
+                    },
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: cs.secondaryContainer.withValues(alpha: 0.6),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: cs.secondary.withValues(alpha: 0.15),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.share_rounded,
+                            size: 18,
+                            color: cs.onSecondaryContainer,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            'Share this tip',
+                            style: theme.textTheme.labelMedium?.copyWith(
+                              fontWeight: FontWeight.w600,
+                              color: cs.onSecondaryContainer,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

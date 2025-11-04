@@ -105,26 +105,32 @@ GreenWise addresses e-waste and unsustainable electronics practices by pairing h
 
 ---
 
-## 🗂️ 10. Project Structure (Current Snapshot)
+## 🗂️ 10. Project Structure (Updated - Phase 2 Complete ✅)
 ```
 lib/
-	main.dart               # App entry point
-android/, ios/, web/, macos/, linux/, windows/  # Platform scaffolding
-test/                     # Widget / unit tests
+├── main.dart                    # App entry point
+├── app_shell.dart              # 4-tab navigation shell
+├── core/                       # Shared utilities (theme, design system)
+├── data/                       # Models & repository implementations
+├── features/                   # Feature-first organization
+│   ├── common/                # Shared widgets (EcoNavBar, EcoAppBar)
+│   ├── onboarding/            # Onboarding flow
+│   ├── progress/              # Progress tracking (domain + presentation)
+│   ├── recycling/             # Recycling directory (domain + presentation)
+│   ├── settings/              # Settings (domain + presentation)
+│   ├── splash/                # Splash screen
+│   └── tips/                  # Daily tips & feed (domain + presentation)
+└── services/                  # Notifications & platform services
+
+test/                          # All tests (6/6 passing ✅)
+docs/                          # Architecture docs & guides
 ```
 
-Planned (proposed) structure as features mature:
-```
-lib/
-	core/          # Theme, constants, utilities
-	data/          # Models, repositories, local/remote sources
-	domain/        # Entities, use-cases (if adopting clean arch)
-	features/
-		tips/        # Tip feed, categories, completion logic
-		habit/       # Streaks, badges, progress metrics
-		settings/    # Preferences, notifications, category filters
-	services/      # Notification scheduling
-```
+**Architecture:** Clean architecture with hybrid feature-first approach. Each feature has:
+- `domain/` - Business logic (Riverpod providers)
+- `presentation/` - UI components (screens, widgets)
+
+See [docs/ARCHITECTURE_DIAGRAM.md](docs/ARCHITECTURE_DIAGRAM.md) for detailed structure and [docs/PHASE2_ARCHITECTURE_COMPLETE.md](docs/PHASE2_ARCHITECTURE_COMPLETE.md) for optimization details.
 
 ## 🧱 11. Tech Stack (Current)
 - Flutter (Dart ^3.9) – cross‑platform UI

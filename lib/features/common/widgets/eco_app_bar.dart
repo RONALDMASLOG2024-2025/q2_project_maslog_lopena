@@ -35,7 +35,7 @@ class EcoAppBar extends StatelessWidget implements PreferredSizeWidget {
                   'assets/images/appbar_logo.png',
           width: 40,
           height: 40,
-          errorBuilder: (_, __, ___) => const Icon(Icons.eco_outlined, size: 32),
+          errorBuilder: (context, error, stackTrace) => const Icon(Icons.eco_outlined, size: 32),
                 ),
               ),
             Expanded(

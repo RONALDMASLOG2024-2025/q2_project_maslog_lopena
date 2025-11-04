@@ -1,0 +1,122 @@
+[
+  {
+    "id": "t163",
+    "text": "Keep your phone charged between 30-80% for maximum battery lifespan instead of full 0-100% cycles.",
+    "category": "energySaving",
+    "explanation": "Lithium-ion batteries last longer when kept in the middle range. Full charge cycles (0-100%) create more stress on battery chemistry than partial charging. This simple habit can significantly extend your device's battery life.",
+    "createdAt": "2025-11-04T10:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t164",
+    "text": "Avoid leaving your phone charging overnight or in a cradle all day to prevent battery degradation.",
+    "category": "deviceCare",
+    "explanation": "Idle charging causes mini-cycles as the battery fluctuates near 100%, generating unnecessary heat and wear. Unplug when fully charged to preserve battery health and reduce energy waste.",
+    "createdAt": "2025-11-04T10:01:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t165",
+    "text": "Keep your device cool - heat is the battery's biggest enemy. Avoid temperatures above 40°C (104°F).",
+    "category": "deviceCare",
+    "explanation": "High temperatures accelerate chemical reactions inside batteries, causing faster degradation. Never leave devices in hot cars, under pillows while charging, or in direct sunlight. Cool devices last longer.",
+    "createdAt": "2025-11-04T10:02:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t166",
+    "text": "Use fast charging sparingly - it creates heat stress that can reduce battery lifespan over time.",
+    "category": "energySaving",
+    "explanation": "While convenient, fast charging pushes more power through the battery quickly, generating extra heat. For daily charging when you're not rushed, use a slower charger to extend battery longevity.",
+    "createdAt": "2025-11-04T10:03:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t167",
+    "text": "Don't game or stream videos while your device is charging - it creates parasitic load and extra heat.",
+    "category": "energySaving",
+    "explanation": "Using power-intensive apps while charging distorts the charging cycle and generates excessive heat from both the processor and battery. Let your device charge peacefully for better battery health.",
+    "createdAt": "2025-11-04T10:04:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t168",
+    "text": "Unplug your charger as soon as your battery is full to avoid trickle charging mini-cycles.",
+    "category": "energySaving",
+    "explanation": "When left plugged in at 100%, devices engage in small charge-discharge cycles to maintain the full charge, causing unnecessary battery wear and wasting energy.",
+    "createdAt": "2025-11-04T10:05:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t169",
+    "text": "Enable bypass charging if your device supports it - it powers the device directly from the charger.",
+    "category": "deviceCare",
+    "explanation": "Some gaming phones and laptops offer bypass charging mode, which routes power directly to the device while bypassing the battery. This reduces battery wear during extended gaming or work sessions.",
+    "createdAt": "2025-11-04T10:06:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t170",
+    "text": "Calibrate your battery periodically to ensure accurate percentage readings and optimal performance.",
+    "category": "deviceCare",
+    "explanation": "Battery calibration (fully charging, then fully discharging, then charging to 100%) helps the device's software accurately track battery capacity. Do this every few months for better battery management.",
+    "createdAt": "2025-11-04T10:07:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t171",
+    "text": "Avoid wireless charging when your phone is hot - it generates more heat than wired charging.",
+    "category": "energySaving",
+    "explanation": "Wireless charging is less efficient than wired, losing energy as heat. If your phone is already warm, use a cable instead to prevent overheating and protect battery health.",
+    "createdAt": "2025-11-04T10:08:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t172",
+    "text": "Store devices at 40-50% charge if you won't use them for weeks or months.",
+    "category": "deviceCare",
+    "explanation": "Storing batteries at very low or very high charge levels causes degradation over time. The 40-50% range is optimal for long-term storage, preserving battery chemistry and extending lifespan.",
+    "createdAt": "2025-11-04T10:09:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t173",
+    "text": "Regular small top-ups are better for lithium-ion batteries than waiting for full discharge.",
+    "category": "energySaving",
+    "explanation": "Unlike older battery technologies, modern Li-ion batteries prefer frequent partial charging over deep discharge cycles. Topping up throughout the day is actually healthier than draining to empty.",
+    "createdAt": "2025-11-04T10:10:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t174",
+    "text": "Monitor your device's temperature during charging and move it to a cooler spot if it feels hot.",
+    "category": "deviceCare",
+    "explanation": "Excessive heat during charging can permanently damage battery capacity. If your device feels uncomfortably warm, remove the case, move it away from other heat sources, or pause charging temporarily.",
+    "createdAt": "2025-11-04T10:11:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t175",
+    "text": "Choose optimal charging speed based on your schedule - slower is better for battery longevity.",
+    "category": "energySaving",
+    "explanation": "Balance convenience with battery health. When you have time (overnight, at desk), use slower chargers. Fast charging is fine occasionally, but daily slow charging extends overall battery lifespan.",
+    "createdAt": "2025-11-04T10:12:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t176",
+    "text": "Avoid frequently draining your battery to 0% or keeping it at 100% for extended periods.",
+    "category": "deviceCare",
+    "explanation": "Extreme battery levels stress lithium-ion chemistry. Keeping charge between 20-80% most of the time minimizes wear and maximizes the number of charge cycles your battery can handle.",
+    "createdAt": "2025-11-04T10:13:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t177",
+    "text": "Charge in well-ventilated, cool areas and remove your phone case if it gets warm during charging.",
+    "category": "deviceCare",
+    "explanation": "Good airflow helps dissipate charging heat. Phone cases trap heat, so removing them during charging allows better cooling, especially important during fast charging or in warm environments.",
+    "createdAt": "2025-11-04T10:14:00Z",
+    "source": "Android Authority"
+  }
+]

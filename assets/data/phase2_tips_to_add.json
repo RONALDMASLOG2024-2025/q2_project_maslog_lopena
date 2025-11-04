@@ -1,0 +1,202 @@
+[
+  {
+    "id": "t138",
+    "text": "Move large apps to your SD card to free up internal phone storage.",
+    "category": "deviceCare",
+    "explanation": "Transferring apps to external storage reduces strain on internal memory, which can improve phone performance and leave room for system updates.",
+    "createdAt": "2025-05-26T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t139",
+    "text": "Limit background processes on Android via Developer options to boost performance.",
+    "category": "deviceCare",
+    "explanation": "Restricting apps from running in the background frees up RAM and processing power, making your device more responsive for active tasks.",
+    "createdAt": "2025-05-27T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t140",
+    "text": "Disable or reduce animation effects in Developer options for a snappier phone experience.",
+    "category": "energySaving",
+    "explanation": "Turning off animations reduces GPU usage and makes the interface feel faster, while consuming slightly less battery power.",
+    "createdAt": "2025-05-28T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t141",
+    "text": "Repurpose your old phone as a dedicated media streamer or smart home controller.",
+    "category": "disposal",
+    "explanation": "Instead of discarding old devices, give them a second life. This reduces e-waste and maximizes the value of the materials and energy used to create them.",
+    "createdAt": "2025-05-29T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t142",
+    "text": "Wipe down your computer monitor weekly with a dry microfiber cloth.",
+    "category": "deviceCare",
+    "explanation": "Regular cleaning prevents fingerprints and dust from damaging protective coatings, reduces eye strain, and extends screen lifespan.",
+    "createdAt": "2025-05-30T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t143",
+    "text": "Clean your mouse weekly to prevent grime buildup that affects cursor accuracy.",
+    "category": "deviceCare",
+    "explanation": "Dust and oils interfere with optical sensors, causing erratic movement. Regular cleaning ensures smooth performance and reduces bacteria spread.",
+    "createdAt": "2025-05-31T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t144",
+    "text": "Open your PC and use compressed air quarterly to remove dust from fans and components.",
+    "category": "deviceCare",
+    "explanation": "Dust buildup traps heat and can cause overheating, which degrades performance and shortens hardware lifespan. Deep cleaning maintains airflow.",
+    "createdAt": "2025-06-01T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t145",
+    "text": "Use compressed air monthly to clear dust from USB, HDMI, and power ports.",
+    "category": "deviceCare",
+    "explanation": "Debris in ports can prevent proper connections, cause charging issues, or damage internal components over time.",
+    "createdAt": "2025-06-02T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t146",
+    "text": "Defragment your hard disk drive (HDD) monthly to improve file access speed.",
+    "category": "energySaving",
+    "explanation": "Defragmenting reorganizes scattered files so they're stored together, reducing the work your HDD does to retrieve data. (Note: Don't defrag SSDs—use the Optimize Drives tool instead.)",
+    "createdAt": "2025-06-03T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t147",
+    "text": "Disable unnecessary startup apps in Task Manager to speed up boot time.",
+    "category": "energySaving",
+    "explanation": "Fewer startup programs mean your computer uses less memory and CPU during boot, getting you to your desktop faster and improving overall responsiveness.",
+    "createdAt": "2025-06-04T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t148",
+    "text": "Minimize power cycling—avoid turning your computer on and off rapidly.",
+    "category": "deviceCare",
+    "explanation": "Frequent power cycling stresses internal components, especially hard drives and capacitors, which can shorten your device's lifespan.",
+    "createdAt": "2025-06-05T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t149",
+    "text": "Avoid overcharging laptop batteries—disconnect when fully charged to preserve capacity.",
+    "category": "energySaving",
+    "explanation": "Keeping batteries plugged in at 100% for extended periods can degrade lithium-ion cells, reducing overall battery lifespan.",
+    "createdAt": "2025-06-06T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t150",
+    "text": "Keep food and drinks away from your computer to prevent spill damage.",
+    "category": "deviceCare",
+    "explanation": "Liquid spills can short-circuit components and cause permanent hardware damage, while crumbs attract dust and interfere with keyboards.",
+    "createdAt": "2025-06-07T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t151",
+    "text": "Store your PC in a cool, well-ventilated location to reduce overheating risk.",
+    "category": "deviceCare",
+    "explanation": "Heat is a major cause of hardware degradation. Proper placement improves cooling efficiency and extends the life of sensitive components.",
+    "createdAt": "2025-06-08T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t152",
+    "text": "Run a full malware scan weekly to detect and remove hidden threats.",
+    "category": "deviceCare",
+    "explanation": "Malware can steal data, corrupt files, and consume system resources. Regular scans catch infections early before they cause serious damage.",
+    "createdAt": "2025-06-09T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t153",
+    "text": "Enable your computer's firewall to block unauthorized network access.",
+    "category": "deviceCare",
+    "explanation": "Firewalls monitor incoming and outgoing traffic, preventing hackers and malicious software from accessing your device and data.",
+    "createdAt": "2025-06-10T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t154",
+    "text": "Change your device passwords quarterly using strong, unique combinations.",
+    "category": "deviceCare",
+    "explanation": "Regular password updates reduce the risk of unauthorized access from credential theft. Use 15+ characters with mixed cases, numbers, and symbols.",
+    "createdAt": "2025-06-11T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t155",
+    "text": "Organize desktop files into labeled folders monthly to boost system performance.",
+    "category": "energySaving",
+    "explanation": "A cluttered desktop slows down rendering and makes file searches inefficient. Organized folders improve both speed and usability.",
+    "createdAt": "2025-06-12T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t156",
+    "text": "Empty your Recycle Bin weekly to free up hard drive space.",
+    "category": "energySaving",
+    "explanation": "Deleted files remain on your drive until the bin is emptied. Regular clearing recovers storage and can improve system responsiveness.",
+    "createdAt": "2025-06-13T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t157",
+    "text": "Clear your browser cache weekly to remove temporary files and speed up browsing.",
+    "category": "deviceCare",
+    "explanation": "Cached data accumulates over time, consuming storage and potentially slowing performance. Regular clearing keeps your browser running smoothly.",
+    "createdAt": "2025-06-14T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t158",
+    "text": "Before buying new, consider upgrading your computer's hardware or software.",
+    "category": "ecoBuying",
+    "explanation": "Adding RAM, swapping to an SSD, or updating software can breathe new life into old devices, reducing e-waste and saving money.",
+    "createdAt": "2025-06-15T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t159",
+    "text": "Always delete personal data from electronics before recycling or donating them.",
+    "category": "disposal",
+    "explanation": "Factory resets and data wipes protect your privacy and prevent sensitive information from falling into the wrong hands.",
+    "createdAt": "2025-06-16T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t160",
+    "text": "Remove lithium-ion batteries for separate recycling—never trash them.",
+    "category": "disposal",
+    "explanation": "Lithium-ion batteries can cause fires in landfills and contain valuable materials. They require specialized recycling facilities.",
+    "createdAt": "2025-06-17T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t161",
+    "text": "Check your local area for certified electronics recycling facilities.",
+    "category": "disposal",
+    "explanation": "Certified recyclers follow environmental standards and ensure hazardous materials are handled safely, protecting both people and the planet.",
+    "createdAt": "2025-06-18T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t162",
+    "text": "Donate working electronics to charities or refurbishment programs instead of discarding them.",
+    "category": "disposal",
+    "explanation": "Functional devices can be refurbished and given to underserved communities, extending their useful life and reducing e-waste.",
+    "createdAt": "2025-06-19T00:00:00Z",
+    "source": "EPA"
+  }
+]

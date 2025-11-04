@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../../core/design/design_system.dart';
 import '../../common/widgets/eco_app_bar.dart';
-import '../../habit/presentation/streak_provider.dart';
-import '../application/progress_providers.dart';
-import '../../../settings/settings_provider.dart';
-import '../../onboarding/widgets/web_wires_background.dart';
+// import removed: unused
+import '../../common/widgets/static_grid_bubbles_background.dart';
+// import removed: background visuals now static
+import '../domain/impact_provider.dart';
+import '../domain/progress_provider.dart';
+import '../domain/streak_provider.dart';
+import 'widgets/impact_metrics_section.dart';
 
 class ProgressScreen extends ConsumerWidget {
   const ProgressScreen({super.key});
@@ -16,27 +20,12 @@ class ProgressScreen extends ConsumerWidget {
     final recentAsync = ref.watch(recentCompletionsProvider);
     final weeklyDaysAsync = ref.watch(weeklyDaysProvider);
     final last30StatsAsync = ref.watch(last30StatsProvider);
-    final settings = ref.watch(settingsProvider);
-    final cs = Theme.of(context).colorScheme;
+  // final settings = ref.watch(settingsProvider); // not used
     return Scaffold(
       appBar: const EcoAppBar(title: 'Progress'),
       body: Stack(
         children: [
-          if (!settings.reduceMotion)
-            const Positioned.fill(
-              child: IgnorePointer(
-                child: WebWiresBackground(
-                  nodeCount: 24,
-                  neighborCount: 3,
-                  opacity: 0.07,
-                  lineWidthMin: 0.8,
-                  lineWidthMax: 1.4,
-                  nodeMin: 1.6,
-                  nodeMax: 3.0,
-                  driftUpPerSecond: 0.01,
-                ),
-              ),
-            ),
+          Positioned.fill(child: IgnorePointer(child: StaticGridBubblesBackground())),
           Positioned.fill(
             child: RefreshIndicator(
               onRefresh: () async {
@@ -45,6 +34,7 @@ class ProgressScreen extends ConsumerWidget {
                 ref.invalidate(recentCompletionsProvider);
                 ref.invalidate(weeklyDaysProvider);
                 ref.invalidate(last30StatsProvider);
+                ref.invalidate(impactMetricsProvider);
                 await Future.delayed(const Duration(milliseconds: 350));
               },
               child: ListView(
@@ -72,18 +62,10 @@ class ProgressScreen extends ConsumerWidget {
                     child: _Last30StatsCard(statsAsync: last30StatsAsync),
                   ),
                   const SizedBox(height: GWDs.s6),
-                  Padding(
+                  // Environmental Impact Section
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: GWDs.s7),
-                    child: _InsightsRow(),
-                  ),
-                  const SizedBox(height: GWDs.s6),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: GWDs.s7),
-                    child: _DangerZone(
-                      cs: cs,
-                      onClear: () => ref.read(clearProgressProvider.future),
-                      onPopulateDemo: () => ref.read(populateDemoProgressProvider.future),
-                    ),
+                    child: ImpactMetricsSection(),
                   ),
                 ],
               ),
@@ -117,7 +99,7 @@ class _WeeklyRingCard extends StatelessWidget {
             ])
           ]),
           loading: () => const SizedBox(height:84),
-          error: (_, __) => Text('Streak error', style: TextStyle(color: cs.error)),
+          error: (error, stackTrace) => Text('Streak error', style: TextStyle(color: cs.error)),
         )),
       ]),
     );
@@ -154,10 +136,14 @@ class _AnimatedWeeklyRingState extends State<_AnimatedWeeklyRing> with SingleTic
   @override Widget build(BuildContext context){
     final cs=Theme.of(context).colorScheme;
     return SizedBox(width:92,height:92, child: widget.valueAsync.when(
-      data: (v){ _target=v.clamp(0,1); return AnimatedBuilder(animation:_c,builder:(_,__) {
-        final t=Curves.easeOutCubic.transform(_c.value); final val=_old + (_target-_old)*t; return CustomPaint(painter:_WeeklyRingPainter(val, cs));});},
+      data: (v){ _target=v.clamp(0,1); return RepaintBoundary(
+        child: AnimatedBuilder(animation:_c,builder:(context, child) {
+          final t=Curves.easeOutCubic.transform(_c.value); final val=_old + (_target-_old)*t; 
+          return CustomPaint(painter:_WeeklyRingPainter(val, cs));
+        }),
+      );},
       loading: ()=> Center(child: CircularProgressIndicator(strokeWidth:3,valueColor: AlwaysStoppedAnimation(cs.primary))),
-      error: (e,_){return Center(child: Icon(Icons.error_outline,color: cs.error));},
+      error: (e, stackTrace){return Center(child: Icon(Icons.error_outline,color: cs.error));},
     ));
   }
 }
@@ -248,25 +234,39 @@ class _LegendSwatch extends StatelessWidget { final String label; final Color co
 class _WeeklyDaysChips extends StatelessWidget {
   final AsyncValue<List<({DateTime date, bool done})>> daysAsync;
   const _WeeklyDaysChips({required this.daysAsync});
+  
+  String _getDayLabel(DateTime date) {
+    const labels = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+    return labels[date.weekday - 1]; // weekday: 1=Mon, 7=Sun
+  }
+  
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    
     return GWCard(
       child: daysAsync.when(
         data: (days) {
           if (days.isEmpty) return const SizedBox(height: 8);
-          final labels = ['M','T','W','T','F','S','S'];
           return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('This Week Days', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
+            Text('This Week', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
             const SizedBox(height: 12),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              for (int i = 0; i < days.length; i++)
-                _WeekChip(label: labels[i % labels.length], done: days[i].done, cs: cs),
+              for (final day in days)
+                _WeekChip(
+                  label: _getDayLabel(day.date),
+                  done: day.done,
+                  isToday: day.date.year == today.year && 
+                           day.date.month == today.month && 
+                           day.date.day == today.day,
+                  cs: cs,
+                ),
             ]),
           ]);
         },
-        loading: () => const SizedBox(height: 64, child: Center(child: CircularProgressIndicator()))
-        ,
+        loading: () => const SizedBox(height: 64, child: Center(child: CircularProgressIndicator())),
         error: (e, _) => Text('Weekly days error: $e', style: TextStyle(color: cs.error)),
       ),
     );
@@ -274,7 +274,18 @@ class _WeeklyDaysChips extends StatelessWidget {
 }
 
 class _WeekChip extends StatelessWidget {
-  final String label; final bool done; final ColorScheme cs; const _WeekChip({required this.label, required this.done, required this.cs});
+  final String label;
+  final bool done;
+  final bool isToday;
+  final ColorScheme cs;
+  
+  const _WeekChip({
+    required this.label,
+    required this.done,
+    required this.isToday,
+    required this.cs,
+  });
+  
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -284,11 +295,14 @@ class _WeekChip extends StatelessWidget {
       decoration: BoxDecoration(
         color: done ? cs.primary : cs.primary.withValues(alpha: .12),
         borderRadius: BorderRadius.circular(16),
-        boxShadow: done ? [BoxShadow(color: cs.primary.withValues(alpha:.3), blurRadius: 10, offset: const Offset(0,4))] : null,
+        border: isToday ? Border.all(color: cs.secondary, width: 2.5) : null,
+        boxShadow: done 
+            ? [BoxShadow(color: cs.primary.withValues(alpha:.3), blurRadius: 10, offset: const Offset(0,4))]
+            : null,
       ),
       child: Text(label, style: Theme.of(context).textTheme.labelMedium?.copyWith(
         color: done ? cs.onPrimary : cs.onSurface,
-        fontWeight: FontWeight.w700,
+        fontWeight: isToday ? FontWeight.w900 : FontWeight.w700,
       )),
     );
   }
@@ -346,61 +360,3 @@ class _Last30StatsCard extends StatelessWidget {
   }
 }
 
-class _InsightsRow extends StatelessWidget { @override Widget build(BuildContext context){
-  final cs=Theme.of(context).colorScheme; return Row(children:[
-    Expanded(child: GWCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children:[
-      Row(children:[Icon(Icons.bolt_rounded, color: cs.primary), const SizedBox(width:8), Text('Impact', style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600))]),
-      const SizedBox(height:8),
-      Text('Energy & CO₂ estimates coming soon.', style: Theme.of(context).textTheme.bodySmall),
-    ]))), const SizedBox(width:16),
-    Expanded(child: GWCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children:[
-      Row(children:[Icon(Icons.tips_and_updates_outlined, color: cs.primary), const SizedBox(width:8), Text('Focus', style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600))]),
-      const SizedBox(height:8),
-      Text('Your strongest category insights here soon.', style: Theme.of(context).textTheme.bodySmall),
-    ]))),
-  ]);
-}}
-
-class _DangerZone extends StatelessWidget { final ColorScheme cs; final VoidCallback onClear; final Future<void> Function() onPopulateDemo; const _DangerZone({required this.cs, required this.onClear, required this.onPopulateDemo});
-  @override Widget build(BuildContext context){ return GWCard(
-    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children:[
-      Text('Maintenance', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
-      const SizedBox(height:12),
-      Text('You can reset all your streak & completion data. This cannot be undone.', style: Theme.of(context).textTheme.bodySmall),
-      const SizedBox(height:16),
-      ElevatedButton.icon(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: cs.errorContainer,
-          foregroundColor: cs.onErrorContainer,
-          padding: const EdgeInsets.symmetric(horizontal:18, vertical:12),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-        ),
-        onPressed: () async { final ok = await showDialog<bool>(context: context, builder: (ctx)=> AlertDialog(
-          title: const Text('Reset Progress?'),
-          content: const Text('This will clear your streak and completion history. Cannot be undone.'),
-          actions: [
-            TextButton(onPressed: ()=> Navigator.pop(ctx,false), child: const Text('Cancel')),
-            FilledButton.tonal(onPressed: ()=> Navigator.pop(ctx,true), child: const Text('Reset')),
-          ],
-        )); if(ok==true){ onClear(); ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Progress cleared'))); } },
-        icon: const Icon(Icons.delete_forever_outlined),
-        label: const Text('Clear Progress'),
-      ),
-      const SizedBox(height:12),
-      ElevatedButton.icon(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: cs.primaryContainer,
-          foregroundColor: cs.onPrimaryContainer,
-          padding: const EdgeInsets.symmetric(horizontal:18, vertical:12),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-        ),
-        onPressed: () async {
-          await onPopulateDemo();
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Demo data populated')));
-        },
-        icon: const Icon(Icons.auto_fix_high_outlined),
-        label: const Text('Populate Demo Data'),
-      ),
-    ]),
-  ); }
-}

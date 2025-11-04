@@ -1,8 +1,8 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:greenwise/features/progress/domain/progress_provider.dart';
+import 'package:greenwise/features/tips/domain/tip_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:greenwise/features/tips/application/daily_tip_provider.dart';
-import 'package:greenwise/features/progress/application/progress_providers.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

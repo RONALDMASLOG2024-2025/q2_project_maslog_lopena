@@ -37,15 +37,20 @@ dependencies:
   flutter_riverpod: ^2.6.1
   equatable: ^2.0.5
   shared_preferences: ^2.2.3
-  flutter_local_notifications: ^19.4.1
-  http: ^1.2.2
-  connectivity_plus: ^7.0.0
+  flutter_local_notifications: ^19.5.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   path_provider: ^2.1.4
+  path: ^1.9.1
   flutter_svg: ^2.2.1
   url_launcher: ^6.3.1
   timezone: ^0.10.1
+  intl: ^0.20.2
+  sqflite: ^2.4.2
+  sqflite_common_ffi: ^2.3.6
+  device_preview: ^1.2.0
+  share_plus: ^10.1.2
+  fl_chart: ^0.69.0
 
 dev_dependencies:
   flutter_test:
@@ -57,7 +62,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,27 +79,27 @@ flutter:
     - assets/images/
     - assets/data/
 
-# Launcher icon configuration (uses assets/images/GW_Logo.png)
+# Launcher icon configuration (uses assets/images/appbar_logo.png - no text cutoff)
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: assets/images/GW_Logo.png
+  image_path: assets/images/appbar_logo.png
   min_sdk_android: 21
   adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: assets/images/GW_Logo.png
+  adaptive_icon_foreground: assets/images/appbar_logo.png
   remove_alpha_ios: true
   web:
     generate: true
-    image_path: assets/images/GW_Logo.png
+    image_path: assets/images/appbar_logo.png
     background_color: "#FFFFFF"
     theme_color: "#2E7D32"
   windows:
     generate: true
-    image_path: assets/images/GW_Logo.png
+    image_path: assets/images/appbar_logo.png
     icon_size: 48
   macos:
     generate: true
-    image_path: assets/images/GW_Logo.png
+    image_path: assets/images/appbar_logo.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

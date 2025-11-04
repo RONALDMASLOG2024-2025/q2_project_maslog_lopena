@@ -1,122 +1,2922 @@
 [
-  {"id":"t001","text":"Turn off your monitor when stepping away for more than 5 minutes.","category":"energySaving","explanation":"Displays are some of the most power‑hungry peripherals. Turning them off during breaks can save meaningful energy over a day.","createdAt":"2025-01-01T00:00:00Z"},
-  {"id":"t002","text":"Enable automatic sleep mode after 10 minutes of inactivity on your laptop.","category":"energySaving","explanation":"Sleep reduces CPU, disk, and display power draw to near‑idle, cutting wasted energy when you forget to close the lid.","createdAt":"2025-01-02T00:00:00Z"},
-  {"id":"t003","text":"Use a power strip to easily shut off multiple devices at once.","category":"energySaving","explanation":"Many adapters draw standby power. A single switch eliminates vampire loads from monitors, speakers, and docks.","createdAt":"2025-01-03T00:00:00Z"},
-  {"id":"t004","text":"Lower your screen brightness to 50–70% to save energy.","category":"energySaving","explanation":"Backlights and OLED pixels consume less energy at lower brightness, extending battery life and reducing emissions.","createdAt":"2025-01-04T00:00:00Z"},
-  {"id":"t005","text":"Disable keyboard backlighting when you don’t need it.","category":"energySaving","explanation":"Lighting is a constant power draw. Turning it off adds up over hours of typing each day.","createdAt":"2025-01-05T00:00:00Z"},
-  {"id":"t006","text":"Use dark mode to reduce power on OLED screens.","category":"energySaving","explanation":"OLED pixels use power per lit pixel. Dark themes reduce illuminated area, saving power on many phones.","createdAt":"2025-01-06T00:00:00Z"},
-  {"id":"t007","text":"Turn off Bluetooth and Wi‑Fi when not in use to reduce battery drain.","category":"energySaving","explanation":"Radios periodically scan and maintain connections. Disabling them avoids background power use.","createdAt":"2025-01-07T00:00:00Z"},
-  {"id":"t008","text":"Close unused tabs and apps to reduce CPU load and power use.","category":"energySaving","explanation":"Background pages, timers, and scripts keep processors active. Fewer tasks mean lower energy.","createdAt":"2025-01-08T00:00:00Z"},
-  {"id":"t009","text":"Use battery saver mode during commutes or meetings.","category":"energySaving","explanation":"Battery saver throttles background syncing and visual effects to stretch battery and reduce energy.","createdAt":"2025-01-09T00:00:00Z"},
-  {"id":"t010","text":"Prefer wired connections when possible; they’re more energy efficient than wireless.","category":"energySaving","explanation":"Wired links avoid the constant radio negotiation of wireless, reducing energy per bit transferred.","createdAt":"2025-01-10T00:00:00Z"},
-  {"id":"t011","text":"Calibrate your laptop battery quarterly for better longevity.","category":"deviceCare","explanation":"Occasional full cycles help the system estimate capacity correctly and can improve charge management.","createdAt":"2025-01-11T00:00:00Z"},
-  {"id":"t012","text":"Keep air vents clear—avoid using laptops on soft surfaces that block airflow.","category":"deviceCare","explanation":"Blocked vents trap heat, degrading batteries and throttling performance. Good airflow prolongs lifespan.","createdAt":"2025-01-12T00:00:00Z"},
-  {"id":"t013","text":"Clean dust from fans and vents using compressed air.","category":"deviceCare","explanation":"Dust insulates heat and strains fans. A quick clean keeps components cooler and more efficient.","createdAt":"2025-01-13T00:00:00Z"},
-  {"id":"t014","text":"Remove bulky phone cases while charging to reduce heat.","category":"deviceCare","explanation":"Heat is a major factor in battery wear. Better heat dissipation preserves capacity.","createdAt":"2025-01-14T00:00:00Z"},
-  {"id":"t015","text":"Avoid full discharges; keep batteries between 20% and 80%.","category":"deviceCare","explanation":"Lithium‑ion batteries last longer with shallower cycles. Mid‑range charging reduces chemical stress.","createdAt":"2025-01-15T00:00:00Z"},
-  {"id":"t016","text":"Update software regularly to improve efficiency and security.","category":"deviceCare","explanation":"Updates often include performance optimizations and bug fixes that reduce wasted CPU cycles.","createdAt":"2025-01-16T00:00:00Z"},
-  {"id":"t017","text":"Use protective sleeves to prevent drops and scratches.","category":"deviceCare","explanation":"Physical damage shortens device life. Protection prevents premature replacement and waste.","createdAt":"2025-01-17T00:00:00Z"},
-  {"id":"t018","text":"Avoid leaving devices in hot cars—heat degrades batteries.","category":"deviceCare","explanation":"High temperatures accelerate battery chemical reactions that permanently reduce capacity.","createdAt":"2025-01-18T00:00:00Z"},
-  {"id":"t019","text":"Store gadgets at ~50% charge if unused for long periods.","category":"deviceCare","explanation":"Mid‑charge storage slows battery degradation compared to full or empty.","createdAt":"2025-01-19T00:00:00Z"},
-  {"id":"t020","text":"Use surge protectors to guard against power spikes.","category":"deviceCare","explanation":"Voltage spikes can damage power supplies and electronics. Protection avoids premature failure.","createdAt":"2025-01-20T00:00:00Z"},
-  {"id":"t021","text":"Find an e‑waste collection point for broken accessories.","category":"disposal","explanation":"Certified programs recover materials and keep toxins out of landfills.","createdAt":"2025-01-21T00:00:00Z"},
-  {"id":"t022","text":"Wipe personal data before donating or recycling a device.","category":"disposal","explanation":"Data safety ensures devices can be reused or processed responsibly without privacy risks.","createdAt":"2025-01-22T00:00:00Z"},
-  {"id":"t023","text":"Recycle spent batteries at a certified drop-off—never in household trash.","category":"disposal","explanation":"Batteries can leak heavy metals. Proper recycling prevents contamination and recovers materials.","createdAt":"2025-01-23T00:00:00Z"},
-  {"id":"t024","text":"Bundle cables and adapters—reuse or donate what still works.","category":"disposal","explanation":"Reusing accessories reduces new manufacturing and keeps electronics in circulation longer.","createdAt":"2025-01-24T00:00:00Z"},
-  {"id":"t025","text":"Trade in your old phone when upgrading to extend its life cycle.","category":"disposal","explanation":"Trade‑ins keep working phones in use, avoiding the footprint of a new device.","createdAt":"2025-01-25T00:00:00Z"},
-  {"id":"t026","text":"Check local regulations for proper e‑waste handling days.","category":"disposal","explanation":"Scheduled events streamline safe collection, increasing recycling rates and reducing illegal dumping.","createdAt":"2025-01-26T00:00:00Z"},
-  {"id":"t027","text":"Repurpose jars or boxes to store small e‑waste until drop-off.","category":"disposal","explanation":"Keeping items together prevents misplacement and increases the chance they’re recycled.","createdAt":"2025-01-27T00:00:00Z"},
-  {"id":"t028","text":"Sell or donate working devices instead of storing them.","category":"disposal","explanation":"Active use displaces new purchases. Storage provides no benefit and risks obsolescence.","createdAt":"2025-01-28T00:00:00Z"},
-  {"id":"t029","text":"Remove SIM and memory cards before recycling phones.","category":"disposal","explanation":"Protects personal data and speeds up recycling intake.","createdAt":"2025-01-29T00:00:00Z"},
-  {"id":"t030","text":"Use manufacturer take-back programs for branded electronics.","category":"disposal","explanation":"Producer responsibility programs ensure proper handling and material recovery.","createdAt":"2025-01-30T00:00:00Z"},
-  {"id":"t031","text":"Choose energy‑efficient devices with Energy Star or similar labels.","category":"ecoBuying","explanation":"Certified devices meet strict efficiency standards, reducing lifetime energy use.","createdAt":"2025-01-31T00:00:00Z"},
-  {"id":"t032","text":"Prefer devices with replaceable batteries or modular designs.","category":"ecoBuying","explanation":"Repairable hardware extends usable life and avoids replacing whole devices for a single part.","createdAt":"2025-02-01T00:00:00Z"},
-  {"id":"t033","text":"Buy refurbished electronics from reputable sellers to reduce demand for new materials.","category":"ecoBuying","explanation":"Refurbished gear keeps products in circulation and cuts the footprint of manufacturing.","createdAt":"2025-02-02T00:00:00Z"},
-  {"id":"t034","text":"Check repairability scores when choosing gadgets.","category":"ecoBuying","explanation":"Good scores indicate easier fixes and longer lifespans, lowering waste.","createdAt":"2025-02-03T00:00:00Z"},
-  {"id":"t035","text":"Choose durable cases and screen protectors to extend phone life.","category":"ecoBuying","explanation":"Avoiding cracks and breaks prevents early replacement and e‑waste.","createdAt":"2025-02-04T00:00:00Z"},
-  {"id":"t036","text":"Buy only the storage you need; bigger isn’t always greener.","category":"ecoBuying","explanation":"Larger storage often means more chips and energy to produce—right‑size to needs.","createdAt":"2025-02-05T00:00:00Z"},
-  {"id":"t037","text":"Pick multi‑port chargers to share charging across devices.","category":"ecoBuying","explanation":"One efficient charger replaces several bricks, reducing materials and standby power.","createdAt":"2025-02-06T00:00:00Z"},
-  {"id":"t038","text":"Look for USB‑C compatibility to reduce cable clutter.","category":"ecoBuying","explanation":"Standard connectors reduce accessories needed and extend compatibility across devices.","createdAt":"2025-02-07T00:00:00Z"},
-  {"id":"t039","text":"Consider e‑ink readers for long-form reading—they use far less power.","category":"ecoBuying","explanation":"E‑ink displays only use power when changing pages, ideal for reading.","createdAt":"2025-02-08T00:00:00Z"},
-  {"id":"t040","text":"Purchase from brands with transparent sustainability reports.","category":"ecoBuying","explanation":"Transparency signals commitments to lower emissions, better materials, and fair practices.","createdAt":"2025-02-09T00:00:00Z"},
-  {"id":"t041","text":"Use scheduled Do Not Disturb to reduce unnecessary screen wake-ups.","category":"energySaving","explanation":"Fewer wake‑ups mean fewer display activations and radio checks, saving energy over time.","createdAt":"2025-02-10T00:00:00Z"},
-  {"id":"t042","text":"Turn off always-on display if you don’t need quick glances.","category":"energySaving","explanation":"Always‑on displays draw constant power. Turning them off saves battery daily.","createdAt":"2025-02-11T00:00:00Z"},
-  {"id":"t043","text":"Use Ethernet for desktops to reduce Wi‑Fi power usage.","category":"energySaving","explanation":"Ethernet adapters are efficient and offload work from wireless radios.","createdAt":"2025-02-12T00:00:00Z"},
-  {"id":"t044","text":"Consolidate backups to a schedule instead of continuous syncing.","category":"energySaving","explanation":"Batching reduces constant drive and network activity, lowering energy use.","createdAt":"2025-02-13T00:00:00Z"},
-  {"id":"t045","text":"Use low‑power Bluetooth accessories when possible.","category":"energySaving","explanation":"BLE devices are optimized for low energy per connection and event.","createdAt":"2025-02-14T00:00:00Z"},
-  {"id":"t046","text":"Disable auto‑play videos in apps to save data and energy.","category":"energySaving","explanation":"Auto‑played media spikes CPU, GPU, and data—turning it off reduces power.","createdAt":"2025-02-15T00:00:00Z"},
-  {"id":"t047","text":"Use offline playlists instead of streaming repeatedly.","category":"energySaving","explanation":"Local playback avoids repeated network transfers from data centers.","createdAt":"2025-02-16T00:00:00Z"},
-  {"id":"t048","text":"Batch file downloads instead of many small transfers.","category":"energySaving","explanation":"Batching reduces connection overhead and saves energy per file.","createdAt":"2025-02-17T00:00:00Z"},
-  {"id":"t049","text":"Prefer efficient codecs (HEVC/AV1) for local video playback.","category":"energySaving","explanation":"Modern codecs deliver similar quality at lower bitrates, reducing CPU and energy.","createdAt":"2025-02-18T00:00:00Z"},
-  {"id":"t050","text":"Use a smaller, efficient monitor when you don’t need the big one.","category":"energySaving","explanation":"Smaller panels generally use less power—scale displays to the task.","createdAt":"2025-02-19T00:00:00Z"},
-  {"id":"t051","text":"Avoid fast charging every cycle—use it only when needed.","category":"deviceCare","explanation":"High charge rates increase heat and stress. Slower charging preserves capacity.","createdAt":"2025-02-20T00:00:00Z"},
-  {"id":"t052","text":"Keep your OS and drivers updated for optimal efficiency.","category":"deviceCare","explanation":"Updates fix bugs and improve performance, lowering background CPU churn.","createdAt":"2025-02-21T00:00:00Z"},
-  {"id":"t053","text":"Remove unused apps that run background tasks.","category":"deviceCare","explanation":"Fewer background services means cooler operation and better battery health.","createdAt":"2025-02-22T00:00:00Z"},
-  {"id":"t054","text":"Use a case with raised edges to prevent screen cracks.","category":"deviceCare","explanation":"Preventing breaks extends device life and avoids emissions from replacements.","createdAt":"2025-02-23T00:00:00Z"},
-  {"id":"t055","text":"Keep liquids away—use spill‑proof bottles near your desk.","category":"deviceCare","explanation":"Liquid damage totals devices. Avoiding spills prevents e‑waste and data loss.","createdAt":"2025-02-24T00:00:00Z"},
-  {"id":"t056","text":"Back up data regularly to extend device usefulness.","category":"deviceCare","explanation":"Reliable backups let you repair instead of replace if something goes wrong.","createdAt":"2025-02-25T00:00:00Z"},
-  {"id":"t057","text":"Avoid full nights on charger if your device lacks charge management.","category":"deviceCare","explanation":"Staying at 100% and warm all night can age batteries faster.","createdAt":"2025-02-26T00:00:00Z"},
-  {"id":"t058","text":"Use original or certified chargers to protect batteries.","category":"deviceCare","explanation":"Proper voltage/current profiles reduce stress and avoid overheating.","createdAt":"2025-02-27T00:00:00Z"},
-  {"id":"t059","text":"Keep devices and chargers out of direct sunlight.","category":"deviceCare","explanation":"Heat accelerates wear on batteries and plastics—shade extends life.","createdAt":"2025-02-28T00:00:00Z"},
-  {"id":"t060","text":"Reset and refresh aging devices to remove bloat and extend life.","category":"deviceCare","explanation":"A clean system runs cooler and faster, postponing upgrades.","createdAt":"2025-03-01T00:00:00Z"},
-  {"id":"t061","text":"Ask stores about take‑back or mail‑back programs for e‑waste.","category":"disposal","explanation":"Convenient options increase recycling rates and reduce improper disposal.","createdAt":"2025-03-02T00:00:00Z"},
-  {"id":"t062","text":"Donate old laptops to schools or community centers.","category":"disposal","explanation":"Reused devices deliver more value from the same materials and energy.","createdAt":"2025-03-03T00:00:00Z"},
-  {"id":"t063","text":"Use retailer collection bins for small electronics.","category":"disposal","explanation":"Retail drop‑offs make responsible recycling easy during regular shopping trips.","createdAt":"2025-03-04T00:00:00Z"},
-  {"id":"t064","text":"Repair before replacing—seek local repair cafes or services.","category":"disposal","explanation":"Repairing avoids the large footprint of manufacturing a new device.","createdAt":"2025-03-05T00:00:00Z"},
-  {"id":"t065","text":"Post old devices on community sharing groups.","category":"disposal","explanation":"Sharing keeps products in use and reduces new purchases.","createdAt":"2025-03-06T00:00:00Z"},
-  {"id":"t066","text":"Recycle printer cartridges through manufacturer programs.","category":"disposal","explanation":"Closed‑loop programs recover plastics and metals efficiently.","createdAt":"2025-03-07T00:00:00Z"},
-  {"id":"t067","text":"Bundle e‑waste drop‑offs with other errands to save trips.","category":"disposal","explanation":"Combining trips reduces fuel use and emissions.","createdAt":"2025-03-08T00:00:00Z"},
-  {"id":"t068","text":"Check if your city offers door‑to‑door e‑waste pickup days.","category":"disposal","explanation":"Convenience drives participation, diverting more waste from landfills.","createdAt":"2025-03-09T00:00:00Z"},
-  {"id":"t069","text":"Verify recyclers are certified (e.g., R2/Responsible Recycling).","category":"disposal","explanation":"Certified handlers meet environmental and worker safety standards.","createdAt":"2025-03-10T00:00:00Z"},
-  {"id":"t070","text":"Remove device skins and cases before recycling to speed processing.","category":"disposal","explanation":"Pre‑sorting improves throughput and material recovery quality.","createdAt":"2025-03-11T00:00:00Z"},
-  {"id":"t071","text":"Choose eco‑labels (TCO/Blue Angel) where available.","category":"ecoBuying","explanation":"Labels signal lower toxicity, better energy use, and responsible sourcing.","createdAt":"2025-03-12T00:00:00Z"},
-  {"id":"t072","text":"Prefer laptops with efficient processors (U‑series) for battery life.","category":"ecoBuying","explanation":"Low‑power chips deliver needed performance with less energy.","createdAt":"2025-03-13T00:00:00Z"},
-  {"id":"t073","text":"Pick devices with long OS support windows.","category":"ecoBuying","explanation":"Longer support extends safe, efficient use without upgrades.","createdAt":"2025-03-14T00:00:00Z"},
-  {"id":"t074","text":"Buy only compatible accessories you will use often.","category":"ecoBuying","explanation":"Avoids wasted materials and reduces clutter and standby power.","createdAt":"2025-03-15T00:00:00Z"},
-  {"id":"t075","text":"Check local second‑hand marketplaces before buying new.","category":"ecoBuying","explanation":"Reusing products avoids the carbon and mining impacts of new ones.","createdAt":"2025-03-16T00:00:00Z"},
-  {"id":"t076","text":"Consider smaller, lighter laptops—less material and energy to make.","category":"ecoBuying","explanation":"Right‑sized hardware reduces manufacturing inputs and shipping emissions.","createdAt":"2025-03-17T00:00:00Z"},
-  {"id":"t077","text":"Buy from brands offering spare parts and repair guides.","category":"ecoBuying","explanation":"Access to parts keeps devices running longer and out of landfills.","createdAt":"2025-03-18T00:00:00Z"},
-  {"id":"t078","text":"Choose devices with recycled materials when feasible.","category":"ecoBuying","explanation":"Recycled content reduces reliance on virgin materials and cuts emissions.","createdAt":"2025-03-19T00:00:00Z"},
-  {"id":"t079","text":"Avoid bundled extras you don’t need (chargers, cables, dongles).","category":"ecoBuying","explanation":"Unneeded accessories often end up unused—declining them reduces waste.","createdAt":"2025-03-20T00:00:00Z"},
-  {"id":"t080","text":"Extend the life of what you own first—delay upgrades where possible.","category":"ecoBuying","explanation":"The greenest device is the one you already have—longer use lowers total footprint.","createdAt":"2025-03-21T00:00:00Z"},
-  {"id":"t081","text":"Use a fan curve or eco mode to keep devices cool and efficient.","category":"energySaving","explanation":"Cooler devices run more efficiently and avoid throttling that wastes power.","createdAt":"2025-03-22T00:00:00Z"},
-  {"id":"t082","text":"Disable unnecessary startup apps on your PC.","category":"energySaving","explanation":"Startup clutter keeps CPUs busy. Trimming it saves energy every session.","createdAt":"2025-03-23T00:00:00Z"},
-  {"id":"t083","text":"Charge during off‑peak hours if your utility offers time‑of‑use rates.","category":"energySaving","explanation":"Shifting load to cleaner, off‑peak grids can cut associated emissions.","createdAt":"2025-03-24T00:00:00Z"},
-  {"id":"t084","text":"Prefer local compute over cloud for simple tasks to avoid data center energy.","category":"energySaving","explanation":"Local tasks avoid network transfers and remote server power use.","createdAt":"2025-03-25T00:00:00Z"},
-  {"id":"t085","text":"Use smaller file formats for documents and images when possible.","category":"energySaving","explanation":"Lean files need less compute and bandwidth to store and send.","createdAt":"2025-03-26T00:00:00Z"},
-  {"id":"t086","text":"Batch-charging devices instead of trickle charging all day.","category":"energySaving","explanation":"Batching reduces time at high states of charge that age batteries.","createdAt":"2025-03-27T00:00:00Z"},
-  {"id":"t087","text":"Use screen time limits as a cue to power down earlier.","category":"energySaving","explanation":"Less screen time means fewer display hours—the biggest mobile power draw.","createdAt":"2025-03-28T00:00:00Z"},
-  {"id":"t088","text":"Turn off location services for apps that don’t need it.","category":"energySaving","explanation":"GPS and scanning wake radios and sensors. Turn them off to save power.","createdAt":"2025-03-29T00:00:00Z"},
-  {"id":"t089","text":"Use smaller widgets and fewer live wallpapers to save battery.","category":"energySaving","explanation":"Live elements refresh in the background. Simplifying reduces cycles and energy.","createdAt":"2025-03-30T00:00:00Z"},
-  {"id":"t090","text":"Switch to efficient browsers or enable energy‑saving flags.","category":"energySaving","explanation":"Performance features can lower CPU/GPU time per page, saving energy.","createdAt":"2025-03-31T00:00:00Z"},
-  {"id":"t091","text":"Gently clean screens with microfiber and a drop of water—avoid harsh chemicals.","category":"deviceCare","explanation":"Harsh cleaners damage coatings. Proper care keeps devices usable longer.","createdAt":"2025-04-01T00:00:00Z"},
-  {"id":"t092","text":"Archive old photos and files to free storage and speed up devices.","category":"deviceCare","explanation":"Free space helps systems run smoothly, extending useful life.","createdAt":"2025-04-02T00:00:00Z"},
-  {"id":"t093","text":"Replace swollen batteries immediately—don’t continue using the device.","category":"deviceCare","explanation":"Swelling is hazardous and signals failure. Replacing avoids further damage.","createdAt":"2025-04-03T00:00:00Z"},
-  {"id":"t094","text":"Keep ports clean—use a wooden toothpick to remove lint carefully.","category":"deviceCare","explanation":"Clean ports ensure reliable charging and data, preventing unnecessary replacements.","createdAt":"2025-04-04T00:00:00Z"},
-  {"id":"t095","text":"Avoid magnetic mounts near spinning hard drives.","category":"deviceCare","explanation":"Strong magnets can affect older HDDs. Protecting data extends device utility.","createdAt":"2025-04-05T00:00:00Z"},
-  {"id":"t096","text":"Enable Find My/Device Locator to recover and extend device life.","category":"deviceCare","explanation":"Recovery features increase the chance a lost device is used again.","createdAt":"2025-04-06T00:00:00Z"},
-  {"id":"t097","text":"Replace only broken parts (screen/battery) instead of the whole phone.","category":"deviceCare","explanation":"Targeted repairs preserve resources and cut e‑waste.","createdAt":"2025-04-07T00:00:00Z"},
-  {"id":"t098","text":"Use a laptop stand to improve airflow and posture.","category":"deviceCare","explanation":"Cooler laptops run better and last longer; good ergonomics reduce strain.","createdAt":"2025-04-08T00:00:00Z"},
-  {"id":"t099","text":"Keep firmware up to date on routers and smart devices.","category":"deviceCare","explanation":"Updates patch vulnerabilities and improve efficiency, extending device life.","createdAt":"2025-04-09T00:00:00Z"},
-  {"id":"t100","text":"Run periodic malware scans to prevent resource drain.","category":"deviceCare","explanation":"Malware wastes CPU and power. Cleaning it improves performance and battery.","createdAt":"2025-04-10T00:00:00Z"},
-  {"id":"t101","text":"Ask about repair-friendly brands before buying.","category":"ecoBuying","explanation":"Choosing repairable options locks in a longer usable life.","createdAt":"2025-04-11T00:00:00Z"},
-  {"id":"t102","text":"Use community tool libraries instead of buying rarely used gear.","category":"ecoBuying","explanation":"Sharing resources reduces manufacturing demand and clutter.","createdAt":"2025-04-12T00:00:00Z"},
-  {"id":"t103","text":"Pick devices with efficient power adapters (DOE Level VI or better).","category":"ecoBuying","explanation":"Efficient adapters waste less as heat, reducing electricity use over years.","createdAt":"2025-04-13T00:00:00Z"},
-  {"id":"t104","text":"Subscribe to longer OS/security support offerings when available.","category":"ecoBuying","explanation":"Long support extends security and performance without new hardware.","createdAt":"2025-04-14T00:00:00Z"},
-  {"id":"t105","text":"Join buy-nothing groups to exchange accessories you no longer need.","category":"ecoBuying","explanation":"Rehoming accessories keeps them useful and avoids new purchases.","createdAt":"2025-04-15T00:00:00Z"},
-  {"id":"t106","text":"Prefer products with recycled or minimal packaging.","category":"ecoBuying","explanation":"Less packaging reduces waste and often signals better sustainability practices.","createdAt":"2025-04-16T00:00:00Z"},
-  {"id":"t107","text":"Choose repair over replacement at least once this year.","category":"ecoBuying","explanation":"One repair can prevent kilograms of e‑waste and CO₂ from manufacturing.","createdAt":"2025-04-17T00:00:00Z"},
-  {"id":"t108","text":"Share underused devices with family instead of buying new ones.","category":"ecoBuying","explanation":"Maximizing utilization reduces the need for new devices.","createdAt":"2025-04-18T00:00:00Z"},
-  {"id":"t109","text":"Consider universal docks to extend the life of laptops across upgrades.","category":"ecoBuying","explanation":"Common docks maintain compatibility and reduce accessory churn.","createdAt":"2025-04-19T00:00:00Z"},
-  {"id":"t110","text":"Check energy-usage dashboards on smart plugs and adjust habits.","category":"ecoBuying","explanation":"Visibility into usage helps you target high‑impact changes.","createdAt":"2025-04-20T00:00:00Z"},
-  {"id":"t111","text":"Charge multiple devices from one high-wattage hub instead of many bricks.","category":"energySaving","explanation":"One efficient hub cuts standby power and reduces clutter.","createdAt":"2025-04-21T00:00:00Z"},
-  {"id":"t112","text":"Prefer efficient e‑mail habits—unsubscribe and batch-process messages.","category":"energySaving","explanation":"Fewer notifications and less syncing save network and CPU energy.","createdAt":"2025-04-22T00:00:00Z"},
-  {"id":"t113","text":"Use lightweight apps or web versions when possible.","category":"energySaving","explanation":"Lean apps consume fewer resources on older hardware, extending life.","createdAt":"2025-04-23T00:00:00Z"},
-  {"id":"t114","text":"Turn off auto-sync for apps that don’t need constant updates.","category":"energySaving","explanation":"Manual refresh avoids frequent background wakeups and data transfers.","createdAt":"2025-04-24T00:00:00Z"},
-  {"id":"t115","text":"Reduce notifications to cut down on screen activations.","category":"energySaving","explanation":"Every alert lights the screen and wakes radios—fewer alerts save energy.","createdAt":"2025-04-25T00:00:00Z"},
-  {"id":"t116","text":"Use headphone audio instead of speakers to save power on mobile.","category":"energySaving","explanation":"Small drivers in earbuds need less power than phone speakers.","createdAt":"2025-04-26T00:00:00Z"},
-  {"id":"t117","text":"Prefer efficient file formats for presentations (SVG over raster when appropriate).","category":"energySaving","explanation":"Vector graphics can be smaller and scale better, reducing compute.","createdAt":"2025-04-27T00:00:00Z"},
-  {"id":"t118","text":"Compress large files before sending to reduce transfer energy.","category":"energySaving","explanation":"Smaller files consume less bandwidth and server energy end‑to‑end.","createdAt":"2025-04-28T00:00:00Z"},
-  {"id":"t119","text":"Stop background location and activity tracking in unused apps.","category":"energySaving","explanation":"Disabling tracking reduces sensor and radio wakeups that drain power.","createdAt":"2025-04-29T00:00:00Z"},
-  {"id":"t120","text":"Use an e‑waste checklist once a quarter to declutter responsibly.","category":"disposal","explanation":"Regular scans move unused electronics to reuse or recycling sooner.","createdAt":"2025-04-30T00:00:00Z"}
+  {
+    "id": "t001",
+    "text": "Turn off your monitor when stepping away for more than 5 minutes.",
+    "category": "energySaving",
+    "explanation": "Displays are some of the most power‑hungry peripherals. Turning them off during breaks can save meaningful energy over a day.",
+    "createdAt": "2025-01-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t002",
+    "text": "Enable automatic sleep mode after 10 minutes of inactivity on your laptop.",
+    "category": "energySaving",
+    "explanation": "Sleep reduces CPU, disk, and display power draw to near‑idle, cutting wasted energy when you forget to close the lid.",
+    "createdAt": "2025-01-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t003",
+    "text": "Use a power strip to easily shut off multiple devices at once.",
+    "category": "energySaving",
+    "explanation": "Many adapters draw standby power. A single switch eliminates vampire loads from monitors, speakers, and docks.",
+    "createdAt": "2025-01-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t004",
+    "text": "Lower your screen brightness to 50–70% to save energy.",
+    "category": "energySaving",
+    "explanation": "Backlights and OLED pixels consume less energy at lower brightness, extending battery life and reducing emissions.",
+    "createdAt": "2025-01-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t005",
+    "text": "Disable keyboard backlighting when you don’t need it.",
+    "category": "energySaving",
+    "explanation": "Lighting is a constant power draw. Turning it off adds up over hours of typing each day.",
+    "createdAt": "2025-01-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t006",
+    "text": "Use dark mode to reduce power on OLED screens.",
+    "category": "energySaving",
+    "explanation": "OLED pixels use power per lit pixel. Dark themes reduce illuminated area, saving power on many phones.",
+    "createdAt": "2025-01-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t007",
+    "text": "Turn off Bluetooth and Wi‑Fi when not in use to reduce battery drain.",
+    "category": "energySaving",
+    "explanation": "Radios periodically scan and maintain connections. Disabling them avoids background power use.",
+    "createdAt": "2025-01-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t008",
+    "text": "Close unused tabs and apps to reduce CPU load and power use.",
+    "category": "energySaving",
+    "explanation": "Background pages, timers, and scripts keep processors active. Fewer tasks mean lower energy.",
+    "createdAt": "2025-01-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t009",
+    "text": "Use battery saver mode during commutes or meetings.",
+    "category": "energySaving",
+    "explanation": "Battery saver throttles background syncing and visual effects to stretch battery and reduce energy.",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t010",
+    "text": "Prefer wired connections when possible; they’re more energy efficient than wireless.",
+    "category": "energySaving",
+    "explanation": "Wired links avoid the constant radio negotiation of wireless, reducing energy per bit transferred.",
+    "createdAt": "2025-01-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t011",
+    "text": "Calibrate your laptop battery quarterly for better longevity.",
+    "category": "deviceCare",
+    "explanation": "Occasional full cycles help the system estimate capacity correctly and can improve charge management.",
+    "createdAt": "2025-01-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t012",
+    "text": "Keep air vents clear—avoid using laptops on soft surfaces that block airflow.",
+    "category": "deviceCare",
+    "explanation": "Blocked vents trap heat, degrading batteries and throttling performance. Good airflow prolongs lifespan.",
+    "createdAt": "2025-01-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t013",
+    "text": "Clean dust from fans and vents using compressed air.",
+    "category": "deviceCare",
+    "explanation": "Dust insulates heat and strains fans. A quick clean keeps components cooler and more efficient.",
+    "createdAt": "2025-01-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t014",
+    "text": "Remove bulky phone cases while charging to reduce heat.",
+    "category": "deviceCare",
+    "explanation": "Heat is a major factor in battery wear. Better heat dissipation preserves capacity.",
+    "createdAt": "2025-01-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t015",
+    "text": "Avoid full discharges; keep batteries between 20% and 80%.",
+    "category": "deviceCare",
+    "explanation": "Lithium‑ion batteries last longer with shallower cycles. Mid‑range charging reduces chemical stress.",
+    "createdAt": "2025-01-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t016",
+    "text": "Update software regularly to improve efficiency and security.",
+    "category": "deviceCare",
+    "explanation": "Updates often include performance optimizations and bug fixes that reduce wasted CPU cycles.",
+    "createdAt": "2025-01-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t017",
+    "text": "Use protective sleeves to prevent drops and scratches.",
+    "category": "deviceCare",
+    "explanation": "Physical damage shortens device life. Protection prevents premature replacement and waste.",
+    "createdAt": "2025-01-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t018",
+    "text": "Avoid leaving devices in hot cars—heat degrades batteries.",
+    "category": "deviceCare",
+    "explanation": "High temperatures accelerate battery chemical reactions that permanently reduce capacity.",
+    "createdAt": "2025-01-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t019",
+    "text": "Store gadgets at ~50% charge if unused for long periods.",
+    "category": "deviceCare",
+    "explanation": "Mid‑charge storage slows battery degradation compared to full or empty.",
+    "createdAt": "2025-01-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t020",
+    "text": "Use surge protectors to guard against power spikes.",
+    "category": "deviceCare",
+    "explanation": "Voltage spikes can damage power supplies and electronics. Protection avoids premature failure.",
+    "createdAt": "2025-01-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t021",
+    "text": "Find an e‑waste collection point for broken accessories.",
+    "category": "disposal",
+    "explanation": "Certified programs recover materials and keep toxins out of landfills.",
+    "createdAt": "2025-01-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t022",
+    "text": "Wipe personal data before donating or recycling a device.",
+    "category": "disposal",
+    "explanation": "Data safety ensures devices can be reused or processed responsibly without privacy risks.",
+    "createdAt": "2025-01-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t023",
+    "text": "Recycle spent batteries at a certified drop-off—never in household trash.",
+    "category": "disposal",
+    "explanation": "Batteries can leak heavy metals. Proper recycling prevents contamination and recovers materials.",
+    "createdAt": "2025-01-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t024",
+    "text": "Bundle cables and adapters—reuse or donate what still works.",
+    "category": "disposal",
+    "explanation": "Reusing accessories reduces new manufacturing and keeps electronics in circulation longer.",
+    "createdAt": "2025-01-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t025",
+    "text": "Trade in your old phone when upgrading to extend its life cycle.",
+    "category": "disposal",
+    "explanation": "Trade‑ins keep working phones in use, avoiding the footprint of a new device.",
+    "createdAt": "2025-01-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t026",
+    "text": "Check local regulations for proper e‑waste handling days.",
+    "category": "disposal",
+    "explanation": "Scheduled events streamline safe collection, increasing recycling rates and reducing illegal dumping.",
+    "createdAt": "2025-01-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t027",
+    "text": "Repurpose jars or boxes to store small e‑waste until drop-off.",
+    "category": "disposal",
+    "explanation": "Keeping items together prevents misplacement and increases the chance they’re recycled.",
+    "createdAt": "2025-01-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t028",
+    "text": "Sell or donate working devices instead of storing them.",
+    "category": "disposal",
+    "explanation": "Active use displaces new purchases. Storage provides no benefit and risks obsolescence.",
+    "createdAt": "2025-01-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t029",
+    "text": "Remove SIM and memory cards before recycling phones.",
+    "category": "disposal",
+    "explanation": "Protects personal data and speeds up recycling intake.",
+    "createdAt": "2025-01-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t030",
+    "text": "Use manufacturer take-back programs for branded electronics.",
+    "category": "disposal",
+    "explanation": "Producer responsibility programs ensure proper handling and material recovery.",
+    "createdAt": "2025-01-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t031",
+    "text": "Choose energy‑efficient devices with Energy Star or similar labels.",
+    "category": "ecoBuying",
+    "explanation": "Certified devices meet strict efficiency standards, reducing lifetime energy use.",
+    "createdAt": "2025-01-31T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t032",
+    "text": "Prefer devices with replaceable batteries or modular designs.",
+    "category": "ecoBuying",
+    "explanation": "Repairable hardware extends usable life and avoids replacing whole devices for a single part.",
+    "createdAt": "2025-02-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t033",
+    "text": "Buy refurbished electronics from reputable sellers to reduce demand for new materials.",
+    "category": "ecoBuying",
+    "explanation": "Refurbished gear keeps products in circulation and cuts the footprint of manufacturing.",
+    "createdAt": "2025-02-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t034",
+    "text": "Check repairability scores when choosing gadgets.",
+    "category": "ecoBuying",
+    "explanation": "Good scores indicate easier fixes and longer lifespans, lowering waste.",
+    "createdAt": "2025-02-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t035",
+    "text": "Choose durable cases and screen protectors to extend phone life.",
+    "category": "ecoBuying",
+    "explanation": "Avoiding cracks and breaks prevents early replacement and e‑waste.",
+    "createdAt": "2025-02-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t036",
+    "text": "Buy only the storage you need; bigger isn’t always greener.",
+    "category": "ecoBuying",
+    "explanation": "Larger storage often means more chips and energy to produce—right‑size to needs.",
+    "createdAt": "2025-02-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t037",
+    "text": "Pick multi‑port chargers to share charging across devices.",
+    "category": "ecoBuying",
+    "explanation": "One efficient charger replaces several bricks, reducing materials and standby power.",
+    "createdAt": "2025-02-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t038",
+    "text": "Look for USB‑C compatibility to reduce cable clutter.",
+    "category": "ecoBuying",
+    "explanation": "Standard connectors reduce accessories needed and extend compatibility across devices.",
+    "createdAt": "2025-02-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t039",
+    "text": "Consider e‑ink readers for long-form reading—they use far less power.",
+    "category": "ecoBuying",
+    "explanation": "E‑ink displays only use power when changing pages, ideal for reading.",
+    "createdAt": "2025-02-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t040",
+    "text": "Purchase from brands with transparent sustainability reports.",
+    "category": "ecoBuying",
+    "explanation": "Transparency signals commitments to lower emissions, better materials, and fair practices.",
+    "createdAt": "2025-02-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t041",
+    "text": "Use scheduled Do Not Disturb to reduce unnecessary screen wake-ups.",
+    "category": "energySaving",
+    "explanation": "Fewer wake‑ups mean fewer display activations and radio checks, saving energy over time.",
+    "createdAt": "2025-02-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t042",
+    "text": "Turn off always-on display if you don’t need quick glances.",
+    "category": "energySaving",
+    "explanation": "Always‑on displays draw constant power. Turning them off saves battery daily.",
+    "createdAt": "2025-02-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t043",
+    "text": "Use Ethernet for desktops to reduce Wi‑Fi power usage.",
+    "category": "energySaving",
+    "explanation": "Ethernet adapters are efficient and offload work from wireless radios.",
+    "createdAt": "2025-02-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t044",
+    "text": "Consolidate backups to a schedule instead of continuous syncing.",
+    "category": "energySaving",
+    "explanation": "Batching reduces constant drive and network activity, lowering energy use.",
+    "createdAt": "2025-02-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t045",
+    "text": "Use low‑power Bluetooth accessories when possible.",
+    "category": "energySaving",
+    "explanation": "BLE devices are optimized for low energy per connection and event.",
+    "createdAt": "2025-02-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t046",
+    "text": "Disable auto‑play videos in apps to save data and energy.",
+    "category": "energySaving",
+    "explanation": "Auto‑played media spikes CPU, GPU, and data—turning it off reduces power.",
+    "createdAt": "2025-02-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t047",
+    "text": "Use offline playlists instead of streaming repeatedly.",
+    "category": "energySaving",
+    "explanation": "Local playback avoids repeated network transfers from data centers.",
+    "createdAt": "2025-02-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t048",
+    "text": "Batch file downloads instead of many small transfers.",
+    "category": "energySaving",
+    "explanation": "Batching reduces connection overhead and saves energy per file.",
+    "createdAt": "2025-02-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t049",
+    "text": "Prefer efficient codecs (HEVC/AV1) for local video playback.",
+    "category": "energySaving",
+    "explanation": "Modern codecs deliver similar quality at lower bitrates, reducing CPU and energy.",
+    "createdAt": "2025-02-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t050",
+    "text": "Use a smaller, efficient monitor when you don’t need the big one.",
+    "category": "energySaving",
+    "explanation": "Smaller panels generally use less power—scale displays to the task.",
+    "createdAt": "2025-02-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t051",
+    "text": "Avoid fast charging every cycle—use it only when needed.",
+    "category": "deviceCare",
+    "explanation": "High charge rates increase heat and stress. Slower charging preserves capacity.",
+    "createdAt": "2025-02-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t052",
+    "text": "Keep your OS and drivers updated for optimal efficiency.",
+    "category": "deviceCare",
+    "explanation": "Updates fix bugs and improve performance, lowering background CPU churn.",
+    "createdAt": "2025-02-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t053",
+    "text": "Remove unused apps that run background tasks.",
+    "category": "deviceCare",
+    "explanation": "Fewer background services means cooler operation and better battery health.",
+    "createdAt": "2025-02-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t054",
+    "text": "Use a case with raised edges to prevent screen cracks.",
+    "category": "deviceCare",
+    "explanation": "Preventing breaks extends device life and avoids emissions from replacements.",
+    "createdAt": "2025-02-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t055",
+    "text": "Keep liquids away—use spill‑proof bottles near your desk.",
+    "category": "deviceCare",
+    "explanation": "Liquid damage totals devices. Avoiding spills prevents e‑waste and data loss.",
+    "createdAt": "2025-02-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t056",
+    "text": "Back up data regularly to extend device usefulness.",
+    "category": "deviceCare",
+    "explanation": "Reliable backups let you repair instead of replace if something goes wrong.",
+    "createdAt": "2025-02-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t057",
+    "text": "Avoid full nights on charger if your device lacks charge management.",
+    "category": "deviceCare",
+    "explanation": "Staying at 100% and warm all night can age batteries faster.",
+    "createdAt": "2025-02-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t058",
+    "text": "Use original or certified chargers to protect batteries.",
+    "category": "deviceCare",
+    "explanation": "Proper voltage/current profiles reduce stress and avoid overheating.",
+    "createdAt": "2025-02-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t059",
+    "text": "Keep devices and chargers out of direct sunlight.",
+    "category": "deviceCare",
+    "explanation": "Heat accelerates wear on batteries and plastics—shade extends life.",
+    "createdAt": "2025-02-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t060",
+    "text": "Reset and refresh aging devices to remove bloat and extend life.",
+    "category": "deviceCare",
+    "explanation": "A clean system runs cooler and faster, postponing upgrades.",
+    "createdAt": "2025-03-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t061",
+    "text": "Ask stores about take‑back or mail‑back programs for e‑waste.",
+    "category": "disposal",
+    "explanation": "Convenient options increase recycling rates and reduce improper disposal.",
+    "createdAt": "2025-03-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t062",
+    "text": "Donate old laptops to schools or community centers.",
+    "category": "disposal",
+    "explanation": "Reused devices deliver more value from the same materials and energy.",
+    "createdAt": "2025-03-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t063",
+    "text": "Use retailer collection bins for small electronics.",
+    "category": "disposal",
+    "explanation": "Retail drop‑offs make responsible recycling easy during regular shopping trips.",
+    "createdAt": "2025-03-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t064",
+    "text": "Repair before replacing—seek local repair cafes or services.",
+    "category": "disposal",
+    "explanation": "Repairing avoids the large footprint of manufacturing a new device.",
+    "createdAt": "2025-03-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t065",
+    "text": "Post old devices on community sharing groups.",
+    "category": "disposal",
+    "explanation": "Sharing keeps products in use and reduces new purchases.",
+    "createdAt": "2025-03-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t066",
+    "text": "Recycle printer cartridges through manufacturer programs.",
+    "category": "disposal",
+    "explanation": "Closed‑loop programs recover plastics and metals efficiently.",
+    "createdAt": "2025-03-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t067",
+    "text": "Bundle e‑waste drop‑offs with other errands to save trips.",
+    "category": "disposal",
+    "explanation": "Combining trips reduces fuel use and emissions.",
+    "createdAt": "2025-03-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t068",
+    "text": "Check if your city offers door‑to‑door e‑waste pickup days.",
+    "category": "disposal",
+    "explanation": "Convenience drives participation, diverting more waste from landfills.",
+    "createdAt": "2025-03-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t069",
+    "text": "Verify recyclers are certified (e.g., R2/Responsible Recycling).",
+    "category": "disposal",
+    "explanation": "Certified handlers meet environmental and worker safety standards.",
+    "createdAt": "2025-03-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t070",
+    "text": "Remove device skins and cases before recycling to speed processing.",
+    "category": "disposal",
+    "explanation": "Pre‑sorting improves throughput and material recovery quality.",
+    "createdAt": "2025-03-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t071",
+    "text": "Choose eco‑labels (TCO/Blue Angel) where available.",
+    "category": "ecoBuying",
+    "explanation": "Labels signal lower toxicity, better energy use, and responsible sourcing.",
+    "createdAt": "2025-03-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t072",
+    "text": "Prefer laptops with efficient processors (U‑series) for battery life.",
+    "category": "ecoBuying",
+    "explanation": "Low‑power chips deliver needed performance with less energy.",
+    "createdAt": "2025-03-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t073",
+    "text": "Pick devices with long OS support windows.",
+    "category": "ecoBuying",
+    "explanation": "Longer support extends safe, efficient use without upgrades.",
+    "createdAt": "2025-03-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t074",
+    "text": "Buy only compatible accessories you will use often.",
+    "category": "ecoBuying",
+    "explanation": "Avoids wasted materials and reduces clutter and standby power.",
+    "createdAt": "2025-03-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t075",
+    "text": "Check local second‑hand marketplaces before buying new.",
+    "category": "ecoBuying",
+    "explanation": "Reusing products avoids the carbon and mining impacts of new ones.",
+    "createdAt": "2025-03-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t076",
+    "text": "Consider smaller, lighter laptops—less material and energy to make.",
+    "category": "ecoBuying",
+    "explanation": "Right‑sized hardware reduces manufacturing inputs and shipping emissions.",
+    "createdAt": "2025-03-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t077",
+    "text": "Buy from brands offering spare parts and repair guides.",
+    "category": "ecoBuying",
+    "explanation": "Access to parts keeps devices running longer and out of landfills.",
+    "createdAt": "2025-03-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t078",
+    "text": "Choose devices with recycled materials when feasible.",
+    "category": "ecoBuying",
+    "explanation": "Recycled content reduces reliance on virgin materials and cuts emissions.",
+    "createdAt": "2025-03-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t079",
+    "text": "Avoid bundled extras you don’t need (chargers, cables, dongles).",
+    "category": "ecoBuying",
+    "explanation": "Unneeded accessories often end up unused—declining them reduces waste.",
+    "createdAt": "2025-03-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t080",
+    "text": "Extend the life of what you own first—delay upgrades where possible.",
+    "category": "ecoBuying",
+    "explanation": "The greenest device is the one you already have—longer use lowers total footprint.",
+    "createdAt": "2025-03-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t081",
+    "text": "Use a fan curve or eco mode to keep devices cool and efficient.",
+    "category": "energySaving",
+    "explanation": "Cooler devices run more efficiently and avoid throttling that wastes power.",
+    "createdAt": "2025-03-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t082",
+    "text": "Disable unnecessary startup apps on your PC.",
+    "category": "energySaving",
+    "explanation": "Startup clutter keeps CPUs busy. Trimming it saves energy every session.",
+    "createdAt": "2025-03-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t083",
+    "text": "Charge during off‑peak hours if your utility offers time‑of‑use rates.",
+    "category": "energySaving",
+    "explanation": "Shifting load to cleaner, off‑peak grids can cut associated emissions.",
+    "createdAt": "2025-03-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t084",
+    "text": "Prefer local compute over cloud for simple tasks to avoid data center energy.",
+    "category": "energySaving",
+    "explanation": "Local tasks avoid network transfers and remote server power use.",
+    "createdAt": "2025-03-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t085",
+    "text": "Use smaller file formats for documents and images when possible.",
+    "category": "energySaving",
+    "explanation": "Lean files need less compute and bandwidth to store and send.",
+    "createdAt": "2025-03-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t086",
+    "text": "Batch-charging devices instead of trickle charging all day.",
+    "category": "energySaving",
+    "explanation": "Batching reduces time at high states of charge that age batteries.",
+    "createdAt": "2025-03-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t087",
+    "text": "Use screen time limits as a cue to power down earlier.",
+    "category": "energySaving",
+    "explanation": "Less screen time means fewer display hours—the biggest mobile power draw.",
+    "createdAt": "2025-03-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t088",
+    "text": "Turn off location services for apps that don’t need it.",
+    "category": "energySaving",
+    "explanation": "GPS and scanning wake radios and sensors. Turn them off to save power.",
+    "createdAt": "2025-03-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t089",
+    "text": "Use smaller widgets and fewer live wallpapers to save battery.",
+    "category": "energySaving",
+    "explanation": "Live elements refresh in the background. Simplifying reduces cycles and energy.",
+    "createdAt": "2025-03-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t090",
+    "text": "Switch to efficient browsers or enable energy‑saving flags.",
+    "category": "energySaving",
+    "explanation": "Performance features can lower CPU/GPU time per page, saving energy.",
+    "createdAt": "2025-03-31T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t091",
+    "text": "Gently clean screens with microfiber and a drop of water—avoid harsh chemicals.",
+    "category": "deviceCare",
+    "explanation": "Harsh cleaners damage coatings. Proper care keeps devices usable longer.",
+    "createdAt": "2025-04-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t092",
+    "text": "Archive old photos and files to free storage and speed up devices.",
+    "category": "deviceCare",
+    "explanation": "Free space helps systems run smoothly, extending useful life.",
+    "createdAt": "2025-04-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t093",
+    "text": "Replace swollen batteries immediately—don’t continue using the device.",
+    "category": "deviceCare",
+    "explanation": "Swelling is hazardous and signals failure. Replacing avoids further damage.",
+    "createdAt": "2025-04-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t094",
+    "text": "Keep ports clean—use a wooden toothpick to remove lint carefully.",
+    "category": "deviceCare",
+    "explanation": "Clean ports ensure reliable charging and data, preventing unnecessary replacements.",
+    "createdAt": "2025-04-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t095",
+    "text": "Avoid magnetic mounts near spinning hard drives.",
+    "category": "deviceCare",
+    "explanation": "Strong magnets can affect older HDDs. Protecting data extends device utility.",
+    "createdAt": "2025-04-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t096",
+    "text": "Enable Find My/Device Locator to recover and extend device life.",
+    "category": "deviceCare",
+    "explanation": "Recovery features increase the chance a lost device is used again.",
+    "createdAt": "2025-04-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t097",
+    "text": "Replace only broken parts (screen/battery) instead of the whole phone.",
+    "category": "deviceCare",
+    "explanation": "Targeted repairs preserve resources and cut e‑waste.",
+    "createdAt": "2025-04-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t098",
+    "text": "Use a laptop stand to improve airflow and posture.",
+    "category": "deviceCare",
+    "explanation": "Cooler laptops run better and last longer; good ergonomics reduce strain.",
+    "createdAt": "2025-04-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t099",
+    "text": "Keep firmware up to date on routers and smart devices.",
+    "category": "deviceCare",
+    "explanation": "Updates patch vulnerabilities and improve efficiency, extending device life.",
+    "createdAt": "2025-04-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t100",
+    "text": "Run periodic malware scans to prevent resource drain.",
+    "category": "deviceCare",
+    "explanation": "Malware wastes CPU and power. Cleaning it improves performance and battery.",
+    "createdAt": "2025-04-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t101",
+    "text": "Ask about repair-friendly brands before buying.",
+    "category": "ecoBuying",
+    "explanation": "Choosing repairable options locks in a longer usable life.",
+    "createdAt": "2025-04-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t102",
+    "text": "Use community tool libraries instead of buying rarely used gear.",
+    "category": "ecoBuying",
+    "explanation": "Sharing resources reduces manufacturing demand and clutter.",
+    "createdAt": "2025-04-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t103",
+    "text": "Pick devices with efficient power adapters (DOE Level VI or better).",
+    "category": "ecoBuying",
+    "explanation": "Efficient adapters waste less as heat, reducing electricity use over years.",
+    "createdAt": "2025-04-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t104",
+    "text": "Subscribe to longer OS/security support offerings when available.",
+    "category": "ecoBuying",
+    "explanation": "Long support extends security and performance without new hardware.",
+    "createdAt": "2025-04-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t105",
+    "text": "Join buy-nothing groups to exchange accessories you no longer need.",
+    "category": "ecoBuying",
+    "explanation": "Rehoming accessories keeps them useful and avoids new purchases.",
+    "createdAt": "2025-04-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t106",
+    "text": "Prefer products with recycled or minimal packaging.",
+    "category": "ecoBuying",
+    "explanation": "Less packaging reduces waste and often signals better sustainability practices.",
+    "createdAt": "2025-04-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t107",
+    "text": "Choose repair over replacement at least once this year.",
+    "category": "ecoBuying",
+    "explanation": "One repair can prevent kilograms of e‑waste and CO₂ from manufacturing.",
+    "createdAt": "2025-04-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t108",
+    "text": "Share underused devices with family instead of buying new ones.",
+    "category": "ecoBuying",
+    "explanation": "Maximizing utilization reduces the need for new devices.",
+    "createdAt": "2025-04-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t109",
+    "text": "Consider universal docks to extend the life of laptops across upgrades.",
+    "category": "ecoBuying",
+    "explanation": "Common docks maintain compatibility and reduce accessory churn.",
+    "createdAt": "2025-04-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t110",
+    "text": "Check energy-usage dashboards on smart plugs and adjust habits.",
+    "category": "ecoBuying",
+    "explanation": "Visibility into usage helps you target high‑impact changes.",
+    "createdAt": "2025-04-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t111",
+    "text": "Charge multiple devices from one high-wattage hub instead of many bricks.",
+    "category": "energySaving",
+    "explanation": "One efficient hub cuts standby power and reduces clutter.",
+    "createdAt": "2025-04-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t112",
+    "text": "Prefer efficient e‑mail habits—unsubscribe and batch-process messages.",
+    "category": "energySaving",
+    "explanation": "Fewer notifications and less syncing save network and CPU energy.",
+    "createdAt": "2025-04-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t113",
+    "text": "Use lightweight apps or web versions when possible.",
+    "category": "energySaving",
+    "explanation": "Lean apps consume fewer resources on older hardware, extending life.",
+    "createdAt": "2025-04-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t114",
+    "text": "Turn off auto-sync for apps that don’t need constant updates.",
+    "category": "energySaving",
+    "explanation": "Manual refresh avoids frequent background wakeups and data transfers.",
+    "createdAt": "2025-04-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t115",
+    "text": "Reduce notifications to cut down on screen activations.",
+    "category": "energySaving",
+    "explanation": "Every alert lights the screen and wakes radios—fewer alerts save energy.",
+    "createdAt": "2025-04-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t116",
+    "text": "Use headphone audio instead of speakers to save power on mobile.",
+    "category": "energySaving",
+    "explanation": "Small drivers in earbuds need less power than phone speakers.",
+    "createdAt": "2025-04-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t117",
+    "text": "Prefer efficient file formats for presentations (SVG over raster when appropriate).",
+    "category": "energySaving",
+    "explanation": "Vector graphics can be smaller and scale better, reducing compute.",
+    "createdAt": "2025-04-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t118",
+    "text": "Compress large files before sending to reduce transfer energy.",
+    "category": "energySaving",
+    "explanation": "Smaller files consume less bandwidth and server energy end‑to‑end.",
+    "createdAt": "2025-04-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t119",
+    "text": "Stop background location and activity tracking in unused apps.",
+    "category": "energySaving",
+    "explanation": "Disabling tracking reduces sensor and radio wakeups that drain power.",
+    "createdAt": "2025-04-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t120",
+    "text": "Use an e‑waste checklist once a quarter to declutter responsibly.",
+    "category": "disposal",
+    "explanation": "Regular scans move unused electronics to reuse or recycling sooner.",
+    "createdAt": "2025-04-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t121",
+    "text": "Hard restart your phone regularly to clear app caching running amok, network connectivity difficulties, and memory glitches.",
+    "category": "deviceCare",
+    "explanation": "Clears accumulated issues that slow down performance without requiring any deletions or changes.",
+    "createdAt": "2025-11-05T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t122",
+    "text": "Uninstall apps you're not using to free up storage and stop background processing.",
+    "category": "deviceCare",
+    "explanation": "Unused apps consume storage and quietly hog processing power in the background, slowing your device.",
+    "createdAt": "2025-11-06T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t123",
+    "text": "Turn on Auto Archive in Google Play to automatically remove unused app data while keeping icons.",
+    "category": "deviceCare",
+    "explanation": "Frees up space automatically without losing apps completely—you can restore them anytime.",
+    "createdAt": "2025-11-07T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t124",
+    "text": "Keep apps updated to their most optimized, efficient versions.",
+    "category": "deviceCare",
+    "explanation": "App updates include performance improvements and bug fixes that make devices run faster.",
+    "createdAt": "2025-11-08T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t125",
+    "text": "Upload photos and videos to Google Photos or iCloud to free up device storage.",
+    "category": "energySaving",
+    "explanation": "Photos and videos consume the most storage space—freeing it up improves performance and extends device life.",
+    "createdAt": "2025-11-09T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t126",
+    "text": "Clear browsing history and website data to remove trace bits that slow your phone down.",
+    "category": "deviceCare",
+    "explanation": "Web pages and apps leave behind cached data that accumulates over time and consumes resources.",
+    "createdAt": "2025-11-10T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t127",
+    "text": "Install the latest operating system version for more efficient performance.",
+    "category": "deviceCare",
+    "explanation": "OS updates are optimized for better speed and battery efficiency compared to older versions.",
+    "createdAt": "2025-11-11T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t128",
+    "text": "Delete widgets you don't actively use to reduce system resource consumption.",
+    "category": "energySaving",
+    "explanation": "Widgets constantly refresh and consume system resources even when you're not looking at them.",
+    "createdAt": "2025-11-12T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t129",
+    "text": "Monitor battery health and consider replacement if it drops below 80%.",
+    "category": "deviceCare",
+    "explanation": "Poor battery health directly impacts device performance and reliability.",
+    "createdAt": "2025-11-13T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t130",
+    "text": "Keep your laptop battery level between 20% and 80% to maximize its lifespan.",
+    "category": "energySaving",
+    "explanation": "Avoiding extreme charge levels (0% or 100%) reduces stress on lithium-ion cells and extends battery life.",
+    "createdAt": "2025-11-14T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t131",
+    "text": "Lower screen brightness to significantly extend battery life.",
+    "category": "energySaving",
+    "explanation": "The display is one of the biggest power consumers—reducing brightness can add hours of battery life.",
+    "createdAt": "2025-11-15T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t132",
+    "text": "When taking extended breaks, use hibernation mode instead of sleep to save maximum power.",
+    "category": "energySaving",
+    "explanation": "Hibernation saves your work and uses almost no power, unlike sleep mode which still drains the battery.",
+    "createdAt": "2025-11-16T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t133",
+    "text": "If storing your laptop for weeks or months, charge it to around 50% first.",
+    "category": "deviceCare",
+    "explanation": "Storing at extreme charge levels (0% or 100%) can permanently damage battery capacity.",
+    "createdAt": "2025-11-17T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t134",
+    "text": "Think twice before upgrading—do you really need a new device?",
+    "category": "ecoBuying",
+    "explanation": "Extending device life by even one year prevents mining of rare earth minerals and reduces e-waste significantly.",
+    "createdAt": "2025-11-18T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t135",
+    "text": "Take broken electronics to a repair cafe instead of buying new.",
+    "category": "deviceCare",
+    "explanation": "Many devices only need minor repairs—fixing them avoids mining new materials and keeps e-waste out of landfill.",
+    "createdAt": "2025-11-19T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t136",
+    "text": "If your device still works, give it to someone who can use it.",
+    "category": "disposal",
+    "explanation": "Reuse is better than recycling—extending a device's useful life has the lowest environmental impact.",
+    "createdAt": "2025-11-20T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t137",
+    "text": "Check if the manufacturer has a take-back program for credit or recycling.",
+    "category": "disposal",
+    "explanation": "Manufacturers can recover valuable materials more efficiently than generic recycling facilities.",
+    "createdAt": "2025-11-21T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t138",
+    "text": "Never throw electronics in regular trash—find a certified e-waste recycler in your area.",
+    "category": "disposal",
+    "explanation": "E-waste contains toxic substances (lead, mercury) that leach into soil and water from landfills.",
+    "createdAt": "2025-11-22T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t139",
+    "text": "Choose brands that offer clear end-of-life recycling or take-back services.",
+    "category": "ecoBuying",
+    "explanation": "Supporting responsible companies drives industry change toward sustainable practices.",
+    "createdAt": "2025-11-23T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t140",
+    "text": "Restart your phone weekly to clear memory, remove temporary files, and trigger system updates.",
+    "category": "deviceCare",
+    "explanation": "Regular restarts prevent memory leaks and performance degradation from accumulated temporary data.",
+    "createdAt": "2025-11-24T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t141",
+    "text": "Update Android operating system regularly for performance optimizations and bug fixes.",
+    "category": "deviceCare",
+    "explanation": "OS updates include security improvements and better app compatibility that enhance device longevity.",
+    "createdAt": "2025-11-25T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t142",
+    "text": "Remove old files and downloads you no longer need to free up space.",
+    "category": "deviceCare",
+    "explanation": "Deleting outdated documents prevents storage clutter that slows down your device.",
+    "createdAt": "2025-11-26T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t143",
+    "text": "Clear app cache regularly by going to Settings > Apps > Storage > Clear Cache.",
+    "category": "deviceCare",
+    "explanation": "Cached data accumulates over time and can cause apps to slow down or malfunction.",
+    "createdAt": "2025-11-27T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t144",
+    "text": "If supported, transfer apps from internal storage to SD card.",
+    "category": "deviceCare",
+    "explanation": "Moving apps to SD card frees up valuable internal storage for better performance.",
+    "createdAt": "2025-11-28T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t145",
+    "text": "Disable or uninstall pre-installed apps (bloatware) that you don't use.",
+    "category": "deviceCare",
+    "explanation": "Bloatware takes up space and resources even when you're not actively using it.",
+    "createdAt": "2025-11-29T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t146",
+    "text": "Restrict apps from running in background via Developer options to limit background processes.",
+    "category": "energySaving",
+    "explanation": "Background processes drain battery and CPU even when apps aren't actively in use.",
+    "createdAt": "2025-11-30T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t147",
+    "text": "Reduce animation effects in Developer options to make phone feel faster.",
+    "category": "energySaving",
+    "explanation": "Disabling animations reduces visual delays and makes UI interactions more responsive.",
+    "createdAt": "2025-12-01T00:00:00Z",
+    "source": "Honor"
+  },
+  {
+    "id": "t148",
+    "text": "Use compressed air to remove dust from fans and vents quarterly, preventing overheating.",
+    "category": "deviceCare",
+    "explanation": "Dust buildup restricts airflow, causing components to overheat and fail prematurely.",
+    "createdAt": "2025-12-02T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t149",
+    "text": "Use compressed air monthly to remove dust from USB, HDMI, and audio ports.",
+    "category": "deviceCare",
+    "explanation": "Dust in ports can prevent proper connections and cause intermittent failures.",
+    "createdAt": "2025-12-03T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t150",
+    "text": "Defragment HDD monthly to reorganize fragmented data for faster access (HDDs only, not SSDs).",
+    "category": "energySaving",
+    "explanation": "Defragmentation reduces disk seek time, improving performance on traditional hard drives.",
+    "createdAt": "2025-12-04T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t151",
+    "text": "Disable unnecessary startup apps via Task Manager to speed boot time.",
+    "category": "energySaving",
+    "explanation": "Fewer startup programs mean faster boots and more available resources after startup.",
+    "createdAt": "2025-12-05T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t152",
+    "text": "Avoid quickly turning computer on/off to reduce stress on components.",
+    "category": "deviceCare",
+    "explanation": "Power cycling stresses capacitors and hard drives, potentially shortening their lifespan.",
+    "createdAt": "2025-12-06T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t153",
+    "text": "Disconnect laptop charger when fully charged to preserve battery capacity.",
+    "category": "energySaving",
+    "explanation": "Overcharging generates heat that degrades battery chemistry over time.",
+    "createdAt": "2025-12-07T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t154",
+    "text": "Keep food and drinks away from your PC to prevent spill-related damage.",
+    "category": "deviceCare",
+    "explanation": "Liquid damage is one of the most common and devastating causes of electronics failure.",
+    "createdAt": "2025-12-08T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t155",
+    "text": "Store your PC in a cool location to reduce overheating risk and accidental damage.",
+    "category": "deviceCare",
+    "explanation": "Heat accelerates component degradation, while cool storage extends hardware life.",
+    "createdAt": "2025-12-09T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t156",
+    "text": "Sort desktop files into labeled folders monthly to improve performance.",
+    "category": "energySaving",
+    "explanation": "Organized files reduce system indexing overhead and make finding files faster.",
+    "createdAt": "2025-12-10T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t157",
+    "text": "Empty Recycle Bin weekly to clear deleted files and free up hard drive space.",
+    "category": "energySaving",
+    "explanation": "Recycle Bin files still occupy disk space until permanently deleted.",
+    "createdAt": "2025-12-11T00:00:00Z",
+    "source": "Norton"
+  },
+  {
+    "id": "t158",
+    "text": "Consider upgrading existing computer hardware or software instead of buying new.",
+    "category": "ecoBuying",
+    "explanation": "Upgrading RAM or storage is often cheaper and more sustainable than full replacement.",
+    "createdAt": "2025-12-12T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t159",
+    "text": "Remove all personal information from electronics before donation or recycling.",
+    "category": "disposal",
+    "explanation": "Data breaches can occur if you don't properly wipe devices before disposal.",
+    "createdAt": "2025-12-13T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t160",
+    "text": "Remove lithium-ion batteries for separate recycling—never trash them.",
+    "category": "disposal",
+    "explanation": "Lithium-ion batteries can explode or catch fire in landfills and require special handling.",
+    "createdAt": "2025-12-14T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t161",
+    "text": "Research e-waste drop-off locations in your local area.",
+    "category": "disposal",
+    "explanation": "Many communities have free e-waste collection events or permanent drop-off centers.",
+    "createdAt": "2025-12-15T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t162",
+    "text": "Find battery recycling locations through Call2Recycle website.",
+    "category": "disposal",
+    "explanation": "Call2Recycle operates thousands of battery recycling drop-off locations across North America.",
+    "createdAt": "2025-12-16T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t163",
+    "text": "Search for electronics recycling options by zip code using Earth911.",
+    "category": "disposal",
+    "explanation": "Earth911's recycling locator helps you find certified recyclers near you.",
+    "createdAt": "2025-12-17T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t164",
+    "text": "Donate functional devices to charities or refurbishment programs.",
+    "category": "disposal",
+    "explanation": "Working electronics have value—donation helps others while keeping devices in use longer.",
+    "createdAt": "2025-12-18T00:00:00Z",
+    "source": "EPA"
+  },
+  {
+    "id": "t165",
+    "text": "Keep phone charged between 30-80% to maximize battery lifespan.",
+    "category": "energySaving",
+    "explanation": "Partial charging reduces stress on lithium-ion cells compared to full 0-100% cycles.",
+    "createdAt": "2025-12-19T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t166",
+    "text": "Don't leave phone charging overnight or in cradle all day.",
+    "category": "deviceCare",
+    "explanation": "Idle charging causes mini-cycles and heat buildup that degrade battery health.",
+    "createdAt": "2025-12-20T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t167",
+    "text": "Heat is battery's biggest enemy—keep phone under 40°C (104°F).",
+    "category": "deviceCare",
+    "explanation": "High temperatures accelerate chemical degradation inside lithium-ion batteries.",
+    "createdAt": "2025-12-21T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t168",
+    "text": "Limit fast charging use—it creates heat stress on battery.",
+    "category": "energySaving",
+    "explanation": "Fast charging is convenient but generates more heat than slower charging methods.",
+    "createdAt": "2025-12-22T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t169",
+    "text": "Don't game or stream while charging—it distorts charging cycles and generates extra heat.",
+    "category": "energySaving",
+    "explanation": "Using phone while charging creates parasitic load that degrades battery faster.",
+    "createdAt": "2025-12-23T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t170",
+    "text": "If device supports it, enable bypass charging feature.",
+    "category": "deviceCare",
+    "explanation": "Bypass charging powers device directly from charger, reducing battery wear.",
+    "createdAt": "2025-12-24T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t171",
+    "text": "Store devices at 40-50% charge for long periods to prevent battery degradation.",
+    "category": "deviceCare",
+    "explanation": "Mid-range charge prevents capacity loss during extended storage.",
+    "createdAt": "2025-12-25T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t172",
+    "text": "Regular small top-ups are better for Li-ion batteries than long full charge cycles.",
+    "category": "energySaving",
+    "explanation": "Frequent partial charges reduce stress compared to deep discharge cycles.",
+    "createdAt": "2025-12-26T00:00:00Z",
+    "source": "Android Authority"
+  },
+  {
+    "id": "t173",
+    "text": "Reduce email attachment sizes by compressing files before sending.",
+    "category": "energySaving",
+    "explanation": "Smaller files require less data transfer and storage, reducing energy consumption across servers and networks.",
+    "createdAt": "2025-06-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t174",
+    "text": "Unsubscribe from unnecessary email newsletters to reduce server load.",
+    "category": "energySaving",
+    "explanation": "Each stored email consumes server energy. Fewer emails mean less data center power usage.",
+    "createdAt": "2025-06-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t175",
+    "text": "Use text-based emails instead of HTML when possible.",
+    "category": "energySaving",
+    "explanation": "Plain text emails are smaller and require less processing power to send and store.",
+    "createdAt": "2025-06-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t176",
+    "text": "Download maps for offline use instead of streaming navigation constantly.",
+    "category": "energySaving",
+    "explanation": "Offline maps eliminate continuous data transfer, saving battery and network energy.",
+    "createdAt": "2025-06-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t177",
+    "text": "Disable automatic video playback in social media apps.",
+    "category": "energySaving",
+    "explanation": "Auto-play videos consume significant data and battery. Manual playback gives you control.",
+    "createdAt": "2025-06-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t178",
+    "text": "Use airplane mode when you don't need connectivity.",
+    "category": "energySaving",
+    "explanation": "Airplane mode disables all radios, dramatically reducing power consumption.",
+    "createdAt": "2025-06-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t179",
+    "text": "Close background apps that use location services when not needed.",
+    "category": "energySaving",
+    "explanation": "GPS tracking is power-intensive. Limiting it to essential apps saves battery.",
+    "createdAt": "2025-06-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t180",
+    "text": "Disable push notifications for non-essential apps.",
+    "category": "energySaving",
+    "explanation": "Constant notifications wake the device and use network power for syncing.",
+    "createdAt": "2025-06-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t181",
+    "text": "Use static wallpapers instead of live or animated ones.",
+    "category": "energySaving",
+    "explanation": "Animated wallpapers require continuous GPU processing, draining battery faster.",
+    "createdAt": "2025-06-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t182",
+    "text": "Turn off haptic feedback if you don't need it.",
+    "category": "energySaving",
+    "explanation": "Vibration motors consume more power than you'd expect over daily use.",
+    "createdAt": "2025-06-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t183",
+    "text": "Reduce screen timeout to 30 seconds or less.",
+    "category": "energySaving",
+    "explanation": "Shorter timeout means less wasted display time when you've walked away.",
+    "createdAt": "2025-06-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t184",
+    "text": "Disable automatic brightness and set it manually to a comfortable level.",
+    "category": "energySaving",
+    "explanation": "Auto-brightness sensors use power and may set brightness higher than needed.",
+    "createdAt": "2025-07-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t185",
+    "text": "Use Wi-Fi calling instead of cellular when available.",
+    "category": "energySaving",
+    "explanation": "Wi-Fi uses less power than cellular radios for voice calls.",
+    "createdAt": "2025-07-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t186",
+    "text": "Limit cloud photo backup to Wi-Fi only, not cellular.",
+    "category": "energySaving",
+    "explanation": "Cellular uploads drain battery faster. Wi-Fi-only backup conserves mobile power.",
+    "createdAt": "2025-07-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t187",
+    "text": "Disable automatic app updates and update manually when charging.",
+    "category": "energySaving",
+    "explanation": "Large updates consume significant battery. Scheduling them during charging is more efficient.",
+    "createdAt": "2025-07-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t188",
+    "text": "Use reader mode in browsers to strip unnecessary content.",
+    "category": "energySaving",
+    "explanation": "Reader mode removes ads and scripts, reducing CPU load and data transfer.",
+    "createdAt": "2025-07-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t189",
+    "text": "Clear browser cache monthly to improve performance.",
+    "category": "energySaving",
+    "explanation": "Bloated caches slow down browsing, causing CPU to work harder.",
+    "createdAt": "2025-07-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t190",
+    "text": "Disable browser extensions you don't actively use.",
+    "category": "energySaving",
+    "explanation": "Extensions run continuously in the background, consuming CPU and memory.",
+    "createdAt": "2025-07-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t191",
+    "text": "Use a lightweight browser for basic web browsing.",
+    "category": "energySaving",
+    "explanation": "Minimalist browsers use less resources than feature-heavy alternatives.",
+    "createdAt": "2025-07-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t192",
+    "text": "Limit the number of open browser windows to reduce memory use.",
+    "category": "energySaving",
+    "explanation": "Each window consumes RAM and CPU. Consolidating tabs saves energy.",
+    "createdAt": "2025-07-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t193",
+    "text": "Disable desktop widgets and live tiles you don't check regularly.",
+    "category": "energySaving",
+    "explanation": "Live updates require constant CPU and network activity.",
+    "createdAt": "2025-07-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t194",
+    "text": "Use task manager to close energy-intensive background processes.",
+    "category": "energySaving",
+    "explanation": "Hidden processes can consume significant power without providing value.",
+    "createdAt": "2025-07-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t195",
+    "text": "Disable Windows visual effects for better battery life.",
+    "category": "energySaving",
+    "explanation": "Animations and transparency effects require GPU power continuously.",
+    "createdAt": "2025-07-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t196",
+    "text": "Use power-saving mode in your router during nighttime hours.",
+    "category": "energySaving",
+    "explanation": "Reducing router power or Wi-Fi range when not needed saves energy.",
+    "createdAt": "2025-07-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t197",
+    "text": "Turn off your router when on vacation or extended absences.",
+    "category": "energySaving",
+    "explanation": "Home network equipment uses 24/7 power. Shutting it down eliminates waste.",
+    "createdAt": "2025-07-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t198",
+    "text": "Use a smart plug to schedule device charging during off-peak hours.",
+    "category": "energySaving",
+    "explanation": "Off-peak charging is often greener and may cost less depending on your utility.",
+    "createdAt": "2025-07-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t199",
+    "text": "Unplug laptop chargers when not in use to avoid phantom drain.",
+    "category": "energySaving",
+    "explanation": "Chargers draw power even when not charging. Unplugging eliminates this waste.",
+    "createdAt": "2025-07-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t200",
+    "text": "Use a charging timer to prevent overcharging overnight.",
+    "category": "energySaving",
+    "explanation": "Timers stop power flow after devices are fully charged, preventing waste.",
+    "createdAt": "2025-07-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t201",
+    "text": "Charge multiple devices simultaneously with multi-port chargers.",
+    "category": "energySaving",
+    "explanation": "Single multi-port chargers are more efficient than multiple individual chargers.",
+    "createdAt": "2025-07-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t202",
+    "text": "Use solar chargers for portable devices when outdoors.",
+    "category": "energySaving",
+    "explanation": "Solar power is renewable and eliminates grid electricity use for charging.",
+    "createdAt": "2025-07-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t203",
+    "text": "Disable 5G and use LTE when you don't need maximum speed.",
+    "category": "energySaving",
+    "explanation": "5G radios consume more power than LTE. Switching saves battery.",
+    "createdAt": "2025-07-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t204",
+    "text": "Use grayscale mode to reduce OLED screen power consumption.",
+    "category": "energySaving",
+    "explanation": "Grayscale uses less power on OLED displays than full color.",
+    "createdAt": "2025-07-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t205",
+    "text": "Disable always-listening voice assistants when privacy allows.",
+    "category": "energySaving",
+    "explanation": "Voice assistants continuously monitor audio, using CPU and microphone power.",
+    "createdAt": "2025-07-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t206",
+    "text": "Use wired headphones instead of Bluetooth when possible.",
+    "category": "energySaving",
+    "explanation": "Bluetooth audio requires radio power. Wired connections don't.",
+    "createdAt": "2025-07-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t207",
+    "text": "Reduce video call quality when high-definition isn't necessary.",
+    "category": "energySaving",
+    "explanation": "Lower resolution uses less bandwidth and CPU, reducing energy consumption.",
+    "createdAt": "2025-07-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t208",
+    "text": "Disable video in calls when you only need audio.",
+    "category": "energySaving",
+    "explanation": "Video streaming uses significantly more power than audio alone.",
+    "createdAt": "2025-07-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t209",
+    "text": "Use screen sharing sparingly in video calls.",
+    "category": "energySaving",
+    "explanation": "Screen sharing requires extra processing power for encoding and transmission.",
+    "createdAt": "2025-07-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t210",
+    "text": "Close unnecessary apps before starting resource-intensive tasks.",
+    "category": "energySaving",
+    "explanation": "Freeing resources prevents system from working harder than needed.",
+    "createdAt": "2025-07-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t211",
+    "text": "Use hibernate instead of sleep for longer breaks.",
+    "category": "energySaving",
+    "explanation": "Hibernate uses zero power by saving state to disk, unlike sleep's standby mode.",
+    "createdAt": "2025-07-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t212",
+    "text": "Enable printer sleep mode for home office equipment.",
+    "category": "energySaving",
+    "explanation": "Printers can enter deep sleep when idle, significantly reducing power draw.",
+    "createdAt": "2025-07-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t213",
+    "text": "Print double-sided to reduce paper and ink consumption.",
+    "category": "energySaving",
+    "explanation": "Less printing means less manufacturing and transportation energy for supplies.",
+    "createdAt": "2025-07-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t214",
+    "text": "Use draft mode for everyday printing to save ink and energy.",
+    "category": "energySaving",
+    "explanation": "Draft mode uses less ink and prints faster, requiring less printer-on time.",
+    "createdAt": "2025-07-31T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t215",
+    "text": "Preview documents before printing to avoid wasting paper and ink.",
+    "category": "energySaving",
+    "explanation": "Mistakes waste both supplies and the energy used to produce them.",
+    "createdAt": "2025-08-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t216",
+    "text": "Consolidate printing jobs instead of printing individual pages.",
+    "category": "energySaving",
+    "explanation": "Batch printing reduces warmup cycles and overall printer-on time.",
+    "createdAt": "2025-08-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t217",
+    "text": "Use digital signatures instead of printing documents to sign.",
+    "category": "energySaving",
+    "explanation": "Digital signatures eliminate printing, scanning, and transportation energy.",
+    "createdAt": "2025-08-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t218",
+    "text": "Share documents digitally instead of making multiple printed copies.",
+    "category": "energySaving",
+    "explanation": "Cloud sharing eliminates printing energy and paper waste.",
+    "createdAt": "2025-08-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t219",
+    "text": "Use e-books instead of downloading and printing PDF documents.",
+    "category": "energySaving",
+    "explanation": "E-readers and screens use less total energy than printing physical copies.",
+    "createdAt": "2025-08-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t220",
+    "text": "Disable telemetry and analytics in apps when privacy settings allow.",
+    "category": "energySaving",
+    "explanation": "Constant data reporting uses network and CPU power continuously.",
+    "createdAt": "2025-08-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t221",
+    "text": "Use local file storage instead of constant cloud syncing.",
+    "category": "energySaving",
+    "explanation": "Local-first work reduces network activity and server load.",
+    "createdAt": "2025-08-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t222",
+    "text": "Disable animated GIFs in messaging apps.",
+    "category": "energySaving",
+    "explanation": "Animated images require continuous CPU decoding, draining battery.",
+    "createdAt": "2025-08-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t223",
+    "text": "Use keyboard shortcuts instead of mouse for common tasks.",
+    "category": "energySaving",
+    "explanation": "Keyboards use less power than optical mice that track movement continuously.",
+    "createdAt": "2025-08-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t224",
+    "text": "Reduce mouse polling rate if you're not gaming.",
+    "category": "energySaving",
+    "explanation": "High polling rates use more USB power. Standard rates work fine for office use.",
+    "createdAt": "2025-08-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t225",
+    "text": "Disable RGB lighting on gaming peripherals when not gaming.",
+    "category": "energySaving",
+    "explanation": "RGB LEDs can draw several watts continuously. Turning them off saves power.",
+    "createdAt": "2025-08-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t226",
+    "text": "Use a smaller external monitor when you don't need a large display.",
+    "category": "energySaving",
+    "explanation": "Smaller screens use proportionally less power than larger ones.",
+    "createdAt": "2025-08-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t227",
+    "text": "Turn off second monitors when using only your primary display.",
+    "category": "energySaving",
+    "explanation": "Extra monitors consume power even when showing static content.",
+    "createdAt": "2025-08-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t228",
+    "text": "Use picture-in-picture mode instead of running multiple video streams.",
+    "category": "energySaving",
+    "explanation": "Single stream with PIP uses less CPU than multiple simultaneous videos.",
+    "createdAt": "2025-08-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t229",
+    "text": "Download videos for offline viewing instead of re-streaming.",
+    "category": "energySaving",
+    "explanation": "One download uses less total energy than multiple streams over time.",
+    "createdAt": "2025-08-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t230",
+    "text": "Use lower video quality (480p/720p) when 4K isn't necessary.",
+    "category": "energySaving",
+    "explanation": "Lower resolutions require less bandwidth and CPU decoding power.",
+    "createdAt": "2025-08-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t231",
+    "text": "Disable autoplay on YouTube and streaming platforms.",
+    "category": "energySaving",
+    "explanation": "Autoplay causes unnecessary video loading and playback, wasting energy.",
+    "createdAt": "2025-08-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t232",
+    "text": "Use audio-only mode for podcasts instead of video podcasts.",
+    "category": "energySaving",
+    "explanation": "Audio files are smaller and require less CPU to decode than video.",
+    "createdAt": "2025-08-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t233",
+    "text": "Limit refresh rate to 60Hz when high refresh isn't needed.",
+    "category": "energySaving",
+    "explanation": "Higher refresh rates (120Hz+) use significantly more GPU and display power.",
+    "createdAt": "2025-08-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t234",
+    "text": "Use e-ink displays for reading when available.",
+    "category": "energySaving",
+    "explanation": "E-ink uses power only when changing pages, not for static display.",
+    "createdAt": "2025-08-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t235",
+    "text": "Disable location history tracking when not needed for navigation.",
+    "category": "energySaving",
+    "explanation": "Continuous location logging uses GPS power all day long.",
+    "createdAt": "2025-08-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t236",
+    "text": "Use Wi-Fi hotspot from your phone instead of buying separate mobile router.",
+    "category": "energySaving",
+    "explanation": "One device uses less total energy than two separate devices.",
+    "createdAt": "2025-08-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t237",
+    "text": "Disable Bluetooth discovery mode when not pairing new devices.",
+    "category": "energySaving",
+    "explanation": "Discovery mode continuously broadcasts, using radio power.",
+    "createdAt": "2025-08-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t238",
+    "text": "Use NFC for quick tasks instead of Bluetooth pairing.",
+    "category": "energySaving",
+    "explanation": "NFC uses less power than Bluetooth for simple data transfers.",
+    "createdAt": "2025-08-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t239",
+    "text": "Disable shake-to-undo and motion gestures if you don't use them.",
+    "category": "energySaving",
+    "explanation": "Motion sensors continuously monitor movement, using accelerometer power.",
+    "createdAt": "2025-08-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t240",
+    "text": "Use manual email fetch instead of push for non-urgent accounts.",
+    "category": "energySaving",
+    "explanation": "Push email maintains constant connections. Manual fetch checks only when you open the app.",
+    "createdAt": "2025-08-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t241",
+    "text": "Reduce the number of email accounts synced to your device.",
+    "category": "energySaving",
+    "explanation": "Each account requires separate sync processes and network connections.",
+    "createdAt": "2025-08-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t242",
+    "text": "Use aggregator apps instead of running multiple individual apps.",
+    "category": "energySaving",
+    "explanation": "One app uses fewer resources than many apps doing similar tasks.",
+    "createdAt": "2025-08-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t243",
+    "text": "Disable weather widgets that update frequently.",
+    "category": "energySaving",
+    "explanation": "Constant weather updates require network and CPU activity.",
+    "createdAt": "2025-08-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t244",
+    "text": "Use static icons instead of live app badges.",
+    "category": "energySaving",
+    "explanation": "Live badges require apps to run in background to update counts.",
+    "createdAt": "2025-08-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t245",
+    "text": "Limit the number of smart home devices connected to your network.",
+    "category": "energySaving",
+    "explanation": "Each IoT device adds to continuous network traffic and router load.",
+    "createdAt": "2025-08-31T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t246",
+    "text": "Use local control for smart home devices instead of cloud control.",
+    "category": "energySaving",
+    "explanation": "Local control eliminates internet round-trips and server processing.",
+    "createdAt": "2025-09-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t247",
+    "text": "Turn off smart home devices when on vacation.",
+    "category": "energySaving",
+    "explanation": "Unused smart devices still consume standby power and network resources.",
+    "createdAt": "2025-09-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t248",
+    "text": "Use energy monitoring apps to identify power-hungry apps.",
+    "category": "energySaving",
+    "explanation": "Knowing which apps drain battery helps you make informed usage decisions.",
+    "createdAt": "2025-09-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t249",
+    "text": "Disable app refresh in background for non-essential apps.",
+    "category": "energySaving",
+    "explanation": "Background refresh keeps apps active even when you're not using them.",
+    "createdAt": "2025-09-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t250",
+    "text": "Restart your devices weekly to clear memory and improve performance.",
+    "category": "deviceCare",
+    "explanation": "Regular restarts close memory leaks and refresh system processes for better efficiency.",
+    "createdAt": "2025-09-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t251",
+    "text": "Keep your device's operating system up to date.",
+    "category": "deviceCare",
+    "explanation": "OS updates include performance improvements and battery optimizations.",
+    "createdAt": "2025-09-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t252",
+    "text": "Avoid exposing devices to direct sunlight for extended periods.",
+    "category": "deviceCare",
+    "explanation": "UV exposure and heat can damage screens and degrade internal components.",
+    "createdAt": "2025-09-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t253",
+    "text": "Don't use devices in extreme cold temperatures.",
+    "category": "deviceCare",
+    "explanation": "Cold can slow battery chemistry and make screens brittle.",
+    "createdAt": "2025-09-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t254",
+    "text": "Allow cold devices to warm up before charging.",
+    "category": "deviceCare",
+    "explanation": "Charging cold batteries can cause internal damage. Let them reach room temperature first.",
+    "createdAt": "2025-09-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t255",
+    "text": "Use official or certified chargers to protect battery health.",
+    "category": "deviceCare",
+    "explanation": "Uncertified chargers may deliver incorrect voltage, damaging batteries.",
+    "createdAt": "2025-09-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t256",
+    "text": "Avoid using damaged charging cables.",
+    "category": "deviceCare",
+    "explanation": "Frayed cables can short circuit or deliver unstable power, risking device damage.",
+    "createdAt": "2025-09-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t257",
+    "text": "Keep connectors clean and free of lint or debris.",
+    "category": "deviceCare",
+    "explanation": "Dirty connectors cause poor charging connections and potential damage.",
+    "createdAt": "2025-09-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t258",
+    "text": "Use a soft, lint-free cloth to clean screens.",
+    "category": "deviceCare",
+    "explanation": "Abrasive materials can scratch screens. Microfiber cloths are safest.",
+    "createdAt": "2025-09-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t259",
+    "text": "Avoid using harsh chemicals on screens.",
+    "category": "deviceCare",
+    "explanation": "Chemicals can damage oleophobic coatings and screen materials.",
+    "createdAt": "2025-09-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t260",
+    "text": "Apply screen protectors to prevent scratches.",
+    "category": "deviceCare",
+    "explanation": "Screen protectors are cheaper to replace than entire screens.",
+    "createdAt": "2025-09-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t261",
+    "text": "Use tempered glass screen protectors for better protection.",
+    "category": "deviceCare",
+    "explanation": "Glass protectors absorb impact better than plastic films.",
+    "createdAt": "2025-09-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t262",
+    "text": "Remove screen protectors when they become scratched or bubbled.",
+    "category": "deviceCare",
+    "explanation": "Damaged protectors reduce visibility and don't protect as effectively.",
+    "createdAt": "2025-09-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t263",
+    "text": "Keep devices away from moisture and humidity.",
+    "category": "deviceCare",
+    "explanation": "Moisture can corrode internal components and damage electronics.",
+    "createdAt": "2025-09-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t264",
+    "text": "Don't charge devices in humid environments like bathrooms.",
+    "category": "deviceCare",
+    "explanation": "Humidity plus electricity increases corrosion and short-circuit risks.",
+    "createdAt": "2025-09-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t265",
+    "text": "If a device gets wet, power it off immediately and let it dry.",
+    "category": "deviceCare",
+    "explanation": "Operating wet electronics can cause short circuits and permanent damage.",
+    "createdAt": "2025-09-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t266",
+    "text": "Don't use heat sources to dry wet devices.",
+    "category": "deviceCare",
+    "explanation": "Heat can warp components and damage batteries. Air dry only.",
+    "createdAt": "2025-09-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t267",
+    "text": "Use silica gel packets to absorb moisture if device gets wet.",
+    "category": "deviceCare",
+    "explanation": "Silica gel actively draws moisture out more effectively than rice.",
+    "createdAt": "2025-09-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t268",
+    "text": "Store devices in a dry, cool place when not in use.",
+    "category": "deviceCare",
+    "explanation": "Proper storage prevents humidity damage and temperature stress.",
+    "createdAt": "2025-09-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t269",
+    "text": "Avoid stacking heavy objects on laptops or tablets.",
+    "category": "deviceCare",
+    "explanation": "Pressure can crack screens or damage internal components.",
+    "createdAt": "2025-09-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t270",
+    "text": "Close laptop lids gently to prevent hinge damage.",
+    "category": "deviceCare",
+    "explanation": "Aggressive closing stresses hinges and can crack screens.",
+    "createdAt": "2025-09-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t271",
+    "text": "Lift laptops from the base, not the screen.",
+    "category": "deviceCare",
+    "explanation": "Lifting by the screen stresses hinges and can crack the display.",
+    "createdAt": "2025-09-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t272",
+    "text": "Don't carry laptops by their screens when open.",
+    "category": "deviceCare",
+    "explanation": "Screen weight can damage hinges and the screen itself.",
+    "createdAt": "2025-09-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t273",
+    "text": "Use both hands when carrying tablets to prevent drops.",
+    "category": "deviceCare",
+    "explanation": "Secure grip prevents expensive accidental drops.",
+    "createdAt": "2025-09-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t274",
+    "text": "Keep food and drinks away from devices.",
+    "category": "deviceCare",
+    "explanation": "Spills can destroy electronics instantly. Prevention is key.",
+    "createdAt": "2025-09-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t275",
+    "text": "Don't use devices with greasy or wet hands.",
+    "category": "deviceCare",
+    "explanation": "Moisture and oils can damage screens and enter ports.",
+    "createdAt": "2025-09-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t276",
+    "text": "Clean keyboard keys gently with compressed air.",
+    "category": "deviceCare",
+    "explanation": "Debris under keys affects typing and can damage mechanisms.",
+    "createdAt": "2025-10-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t277",
+    "text": "Avoid eating over keyboards to prevent debris buildup.",
+    "category": "deviceCare",
+    "explanation": "Food particles attract pests and gunk up mechanisms.",
+    "createdAt": "2025-10-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t278",
+    "text": "Use keyboard covers for laptops in dusty environments.",
+    "category": "deviceCare",
+    "explanation": "Covers prevent dust and debris from entering sensitive mechanisms.",
+    "createdAt": "2025-10-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t279",
+    "text": "Don't force connectors or ports when plugging in cables.",
+    "category": "deviceCare",
+    "explanation": "Forcing can bend pins or crack solder joints inside ports.",
+    "createdAt": "2025-10-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t280",
+    "text": "Check cable orientation before plugging in to avoid port damage.",
+    "category": "deviceCare",
+    "explanation": "Wrong orientation can bend or break connector pins.",
+    "createdAt": "2025-10-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t281",
+    "text": "Support cables near connectors to reduce port stress.",
+    "category": "deviceCare",
+    "explanation": "Dangling cables put mechanical stress on ports over time.",
+    "createdAt": "2025-10-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t282",
+    "text": "Unplug cables by gripping the connector, not the wire.",
+    "category": "deviceCare",
+    "explanation": "Pulling on wires can break internal connections in the cable.",
+    "createdAt": "2025-10-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t283",
+    "text": "Coil cables loosely to prevent wire damage.",
+    "category": "deviceCare",
+    "explanation": "Tight coiling can break internal wires and damage insulation.",
+    "createdAt": "2025-10-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t284",
+    "text": "Avoid running over cables with chair wheels.",
+    "category": "deviceCare",
+    "explanation": "Crushing damages wires and creates short-circuit risks.",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t285",
+    "text": "Replace frayed or damaged cables immediately.",
+    "category": "deviceCare",
+    "explanation": "Damaged cables pose fire and shock risks.",
+    "createdAt": "2025-10-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t286",
+    "text": "Use cable management to organize and protect wires.",
+    "category": "deviceCare",
+    "explanation": "Organized cables last longer and prevent tripping hazards.",
+    "createdAt": "2025-10-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t287",
+    "text": "Don't wrap charging cables tightly around power adapters.",
+    "category": "deviceCare",
+    "explanation": "Tight wrapping stresses cable connections at the adapter joint.",
+    "createdAt": "2025-10-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t288",
+    "text": "Store unused cables properly to prevent tangling and damage.",
+    "category": "deviceCare",
+    "explanation": "Tangled cables develop kinks and broken wires.",
+    "createdAt": "2025-10-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t289",
+    "text": "Label cables to identify them easily and prevent mix-ups.",
+    "category": "deviceCare",
+    "explanation": "Proper labeling prevents using wrong chargers or cables.",
+    "createdAt": "2025-10-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t290",
+    "text": "Keep backup of important files on external drives or cloud.",
+    "category": "deviceCare",
+    "explanation": "Backups protect against data loss from device failure.",
+    "createdAt": "2025-10-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t291",
+    "text": "Test backups periodically to ensure they work.",
+    "category": "deviceCare",
+    "explanation": "Untested backups may be corrupted or incomplete when you need them.",
+    "createdAt": "2025-10-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t292",
+    "text": "Use antivirus software to protect against malware.",
+    "category": "deviceCare",
+    "explanation": "Malware can slow devices and steal data. Protection is essential.",
+    "createdAt": "2025-10-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t293",
+    "text": "Avoid clicking suspicious links or downloading unknown files.",
+    "category": "deviceCare",
+    "explanation": "Malicious files can damage systems or steal information.",
+    "createdAt": "2025-10-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t294",
+    "text": "Keep your browser updated to patch security vulnerabilities.",
+    "category": "deviceCare",
+    "explanation": "Browser updates close security holes that attackers exploit.",
+    "createdAt": "2025-10-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t295",
+    "text": "Use strong, unique passwords for device accounts.",
+    "category": "deviceCare",
+    "explanation": "Strong passwords protect against unauthorized access and data theft.",
+    "createdAt": "2025-10-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t296",
+    "text": "Enable two-factor authentication for important accounts.",
+    "category": "deviceCare",
+    "explanation": "2FA adds extra security layer beyond just passwords.",
+    "createdAt": "2025-10-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t297",
+    "text": "Lock your devices when stepping away from them.",
+    "category": "deviceCare",
+    "explanation": "Locking prevents unauthorized access to your data.",
+    "createdAt": "2025-10-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t298",
+    "text": "Enable find my device features for theft recovery.",
+    "category": "deviceCare",
+    "explanation": "Tracking features help locate lost devices and protect data.",
+    "createdAt": "2025-10-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t299",
+    "text": "Encrypt sensitive data stored on devices.",
+    "category": "deviceCare",
+    "explanation": "Encryption protects data if device is lost or stolen.",
+    "createdAt": "2025-10-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t300",
+    "text": "Disable unused features to reduce attack surface.",
+    "category": "deviceCare",
+    "explanation": "Fewer active services mean fewer potential security vulnerabilities.",
+    "createdAt": "2025-10-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t301",
+    "text": "Review app permissions and revoke unnecessary access.",
+    "category": "deviceCare",
+    "explanation": "Apps often request more permissions than needed. Limiting access improves security.",
+    "createdAt": "2025-10-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t302",
+    "text": "Uninstall apps you no longer use.",
+    "category": "deviceCare",
+    "explanation": "Unused apps consume storage and may have security vulnerabilities.",
+    "createdAt": "2025-10-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t303",
+    "text": "Keep minimum number of apps installed for better performance.",
+    "category": "deviceCare",
+    "explanation": "Fewer apps mean less storage use and faster system performance.",
+    "createdAt": "2025-10-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t304",
+    "text": "Monitor storage space and keep at least 10% free.",
+    "category": "deviceCare",
+    "explanation": "Low storage slows devices. Free space allows efficient operation.",
+    "createdAt": "2025-10-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t305",
+    "text": "Clear app caches regularly to free up storage.",
+    "category": "deviceCare",
+    "explanation": "Cached data accumulates over time, consuming valuable storage.",
+    "createdAt": "2025-10-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t306",
+    "text": "Organize files into folders for easier management.",
+    "category": "deviceCare",
+    "explanation": "Organization makes finding files easier and helps identify what to delete.",
+    "createdAt": "2025-10-31T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t307",
+    "text": "Delete duplicate photos and videos to save storage.",
+    "category": "deviceCare",
+    "explanation": "Duplicates waste storage space without adding value.",
+    "createdAt": "2025-11-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t308",
+    "text": "Compress large files before storing or sharing.",
+    "category": "deviceCare",
+    "explanation": "Compression reduces storage use and transfer times.",
+    "createdAt": "2025-11-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t309",
+    "text": "Use cloud storage for files you don't need locally.",
+    "category": "deviceCare",
+    "explanation": "Offloading to cloud frees device storage while keeping files accessible.",
+    "createdAt": "2025-11-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t310",
+    "text": "Defragment traditional hard drives annually.",
+    "category": "deviceCare",
+    "explanation": "Fragmentation slows HDDs. Defragging organizes data for faster access.",
+    "createdAt": "2025-11-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t311",
+    "text": "Don't defragment SSDs - it reduces their lifespan.",
+    "category": "deviceCare",
+    "explanation": "SSDs don't need defragging and it wastes write cycles unnecessarily.",
+    "createdAt": "2025-11-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t312",
+    "text": "Enable TRIM for SSDs to maintain performance.",
+    "category": "deviceCare",
+    "explanation": "TRIM helps SSDs manage deleted data efficiently for sustained speed.",
+    "createdAt": "2025-11-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t313",
+    "text": "Check drive health regularly with diagnostic tools.",
+    "category": "deviceCare",
+    "explanation": "Early warning of drive failure allows backup before data loss.",
+    "createdAt": "2025-11-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t314",
+    "text": "Safely eject external drives before unplugging.",
+    "category": "deviceCare",
+    "explanation": "Proper ejection prevents data corruption and drive damage.",
+    "createdAt": "2025-11-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t315",
+    "text": "Don't move laptops while hard drives are spinning.",
+    "category": "deviceCare",
+    "explanation": "Movement can cause HDD head crashes and permanent damage.",
+    "createdAt": "2025-11-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t316",
+    "text": "Use a laptop cooling pad if device runs hot.",
+    "category": "deviceCare",
+    "explanation": "Extra cooling extends component life and prevents thermal throttling.",
+    "createdAt": "2025-11-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t317",
+    "text": "Keep firmware updated on peripherals and accessories.",
+    "category": "deviceCare",
+    "explanation": "Firmware updates fix bugs and improve compatibility.",
+    "createdAt": "2025-11-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t318",
+    "text": "Calibrate touch screens if they become unresponsive.",
+    "category": "deviceCare",
+    "explanation": "Calibration fixes drift and improves touch accuracy.",
+    "createdAt": "2025-11-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t319",
+    "text": "Reset devices to factory settings if they become very slow.",
+    "category": "deviceCare",
+    "explanation": "Fresh start eliminates software bloat and corruption.",
+    "createdAt": "2025-11-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t320",
+    "text": "Backup data before performing factory resets.",
+    "category": "deviceCare",
+    "explanation": "Factory reset erases everything. Backups prevent data loss.",
+    "createdAt": "2025-11-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t321",
+    "text": "Donate old devices to schools or nonprofits instead of discarding.",
+    "category": "disposal",
+    "explanation": "Working devices help underserved communities and avoid e-waste.",
+    "createdAt": "2025-11-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t322",
+    "text": "Check manufacturer take-back programs before recycling.",
+    "category": "disposal",
+    "explanation": "Manufacturers often offer free recycling and may provide credit.",
+    "createdAt": "2025-11-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t323",
+    "text": "Remove personal data multiple times before disposal.",
+    "category": "disposal",
+    "explanation": "Single wipes can be recovered. Multiple passes ensure data security.",
+    "createdAt": "2025-11-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t324",
+    "text": "Destroy storage media physically if it contained sensitive data.",
+    "category": "disposal",
+    "explanation": "Physical destruction prevents any possibility of data recovery.",
+    "createdAt": "2025-11-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t325",
+    "text": "Don't throw broken devices in regular trash.",
+    "category": "disposal",
+    "explanation": "Electronics contain toxic materials requiring special handling.",
+    "createdAt": "2025-11-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t326",
+    "text": "Find local e-waste collection events in your community.",
+    "category": "disposal",
+    "explanation": "Collection events make proper disposal convenient and free.",
+    "createdAt": "2025-11-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t327",
+    "text": "Contact your city's waste management for e-waste disposal options.",
+    "category": "disposal",
+    "explanation": "Many cities offer dedicated e-waste pickup or drop-off.",
+    "createdAt": "2025-11-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t328",
+    "text": "Return old devices to retailers that offer trade-in programs.",
+    "category": "disposal",
+    "explanation": "Trade-ins give devices second life and may earn you credit.",
+    "createdAt": "2025-11-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t329",
+    "text": "Separate batteries from devices before recycling.",
+    "category": "disposal",
+    "explanation": "Batteries require different recycling processes than electronics.",
+    "createdAt": "2025-11-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t330",
+    "text": "Don't incinerate electronic waste.",
+    "category": "disposal",
+    "explanation": "Burning electronics releases toxic fumes and heavy metals.",
+    "createdAt": "2025-11-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t331",
+    "text": "Keep original packaging for easier returns and resale.",
+    "category": "disposal",
+    "explanation": "Original boxes increase resale value and protect during shipping.",
+    "createdAt": "2025-11-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t332",
+    "text": "Research resale value before assuming device is worthless.",
+    "category": "disposal",
+    "explanation": "Even old devices have value for parts or collectors.",
+    "createdAt": "2025-11-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t333",
+    "text": "Sell working devices on reputable secondhand marketplaces.",
+    "category": "disposal",
+    "explanation": "Resale extends device life and reduces manufacturing demand.",
+    "createdAt": "2025-11-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t334",
+    "text": "Include original accessories when selling devices.",
+    "category": "disposal",
+    "explanation": "Complete sets fetch higher prices and are more useful to buyers.",
+    "createdAt": "2025-11-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t335",
+    "text": "Clean devices thoroughly before selling or donating.",
+    "category": "disposal",
+    "explanation": "Clean devices are more appealing and show you cared for them.",
+    "createdAt": "2025-11-29T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t336",
+    "text": "Be honest about device condition when selling.",
+    "category": "disposal",
+    "explanation": "Honesty prevents disputes and builds trust with buyers.",
+    "createdAt": "2025-11-30T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t337",
+    "text": "Take clear photos for online listings of devices for sale.",
+    "category": "disposal",
+    "explanation": "Good photos increase buyer confidence and sale prices.",
+    "createdAt": "2025-12-01T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t338",
+    "text": "Test devices before selling to ensure they work.",
+    "category": "disposal",
+    "explanation": "Verifying functionality prevents issues for buyers.",
+    "createdAt": "2025-12-02T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t339",
+    "text": "Disable activation locks before selling smartphones.",
+    "category": "disposal",
+    "explanation": "Locked devices are unusable to buyers and may be disputed.",
+    "createdAt": "2025-12-03T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t340",
+    "text": "Remove SIM cards and memory cards before disposal.",
+    "category": "disposal",
+    "explanation": "Cards contain personal data and are reusable in new devices.",
+    "createdAt": "2025-12-04T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t341",
+    "text": "Recycle printer cartridges at office supply stores.",
+    "category": "disposal",
+    "explanation": "Cartridge recycling programs often provide rewards or discounts.",
+    "createdAt": "2025-12-05T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t342",
+    "text": "Don't dispose of CDs or DVDs in regular recycling.",
+    "category": "disposal",
+    "explanation": "Optical media require specialized recycling due to composition.",
+    "createdAt": "2025-12-06T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t343",
+    "text": "Properly recycle old chargers and cables separately.",
+    "category": "disposal",
+    "explanation": "Cables contain copper that can be recovered through recycling.",
+    "createdAt": "2025-12-07T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t344",
+    "text": "Return broken devices to manufacturer for responsible recycling.",
+    "category": "disposal",
+    "explanation": "Manufacturers can recycle proprietary components more effectively.",
+    "createdAt": "2025-12-08T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t345",
+    "text": "Check if your workplace has e-waste recycling programs.",
+    "category": "disposal",
+    "explanation": "Corporate programs often handle large volumes efficiently.",
+    "createdAt": "2025-12-09T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t346",
+    "text": "Educate family members about proper e-waste disposal.",
+    "category": "disposal",
+    "explanation": "Household awareness prevents improper disposal of electronics.",
+    "createdAt": "2025-12-10T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t347",
+    "text": "Keep a dedicated box for e-waste until you can recycle it.",
+    "category": "disposal",
+    "explanation": "Collecting items prevents them from being thrown in trash.",
+    "createdAt": "2025-12-11T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t348",
+    "text": "Don't hoard broken devices - recycle them promptly.",
+    "category": "disposal",
+    "explanation": "Timely recycling recovers materials before they degrade.",
+    "createdAt": "2025-12-12T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t349",
+    "text": "Support right-to-repair legislation in your area.",
+    "category": "disposal",
+    "explanation": "Right-to-repair extends device life and reduces e-waste.",
+    "createdAt": "2025-12-13T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t350",
+    "text": "Participate in community electronics swap events.",
+    "category": "disposal",
+    "explanation": "Swapping extends device life and builds community connections.",
+    "createdAt": "2025-12-14T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t351",
+    "text": "Document device disposal for tax deductions if donating.",
+    "category": "disposal",
+    "explanation": "Charitable donations of electronics may be tax-deductible.",
+    "createdAt": "2025-12-15T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t352",
+    "text": "Buy devices with long manufacturer support commitments.",
+    "category": "ecoBuying",
+    "explanation": "Longer support means more years of updates before obsolescence.",
+    "createdAt": "2025-12-16T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t353",
+    "text": "Choose products with eco-certifications like EPEAT or Energy Star.",
+    "category": "ecoBuying",
+    "explanation": "Certifications verify environmental claims and efficiency standards.",
+    "createdAt": "2025-12-17T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t354",
+    "text": "Research company sustainability practices before purchasing.",
+    "category": "ecoBuying",
+    "explanation": "Supporting eco-conscious companies drives industry-wide change.",
+    "createdAt": "2025-12-18T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t355",
+    "text": "Buy local when possible to reduce shipping emissions.",
+    "category": "ecoBuying",
+    "explanation": "Local purchases minimize transportation environmental impact.",
+    "createdAt": "2025-12-19T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t356",
+    "text": "Choose products made from recycled materials.",
+    "category": "ecoBuying",
+    "explanation": "Recycled materials reduce mining and raw resource extraction.",
+    "createdAt": "2025-12-20T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t357",
+    "text": "Avoid products with excessive packaging.",
+    "category": "ecoBuying",
+    "explanation": "Minimal packaging reduces waste and material consumption.",
+    "createdAt": "2025-12-21T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t358",
+    "text": "Buy multi-functional devices instead of specialized single-use ones.",
+    "category": "ecoBuying",
+    "explanation": "One versatile device replaces several, reducing total manufacturing.",
+    "createdAt": "2025-12-22T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t359",
+    "text": "Choose devices with standard replaceable parts.",
+    "category": "ecoBuying",
+    "explanation": "Replaceable parts extend life and reduce full device replacement.",
+    "createdAt": "2025-12-23T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t360",
+    "text": "Buy quality over quantity - invest in durable devices.",
+    "category": "ecoBuying",
+    "explanation": "Well-made devices last longer, reducing replacement frequency.",
+    "createdAt": "2025-12-24T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t361",
+    "text": "Consider renting or leasing for short-term needs.",
+    "category": "ecoBuying",
+    "explanation": "Temporary use doesn't require permanent ownership.",
+    "createdAt": "2025-12-25T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t362",
+    "text": "Wait for genuine needs before buying new technology.",
+    "category": "ecoBuying",
+    "explanation": "Avoiding impulse purchases reduces unnecessary consumption.",
+    "createdAt": "2025-12-26T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t363",
+    "text": "Research longevity and reliability before purchasing.",
+    "category": "ecoBuying",
+    "explanation": "Reliable devices avoid premature failure and replacement.",
+    "createdAt": "2025-12-27T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t364",
+    "text": "Check warranty length and coverage before buying.",
+    "category": "ecoBuying",
+    "explanation": "Good warranties indicate manufacturer confidence and support.",
+    "createdAt": "2025-12-28T00:00:00Z",
+    "source": "AI-Generated"
+  },
+  {
+    "id": "t365",
+    "text": "Support companies with take-back and recycling programs.",
+    "category": "ecoBuying",
+    "explanation": "Producer responsibility ensures end-of-life device handling.",
+    "createdAt": "2025-12-29T00:00:00Z",
+    "source": "AI-Generated"
+  }
 ]

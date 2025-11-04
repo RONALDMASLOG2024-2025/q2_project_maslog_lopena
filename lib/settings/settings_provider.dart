@@ -77,31 +77,38 @@ class SettingsState {
 }
 
 class SettingsStore {
-  static late Box _box;
+  static Box? _box;
+  
   static Future<void> ensureInitialized() async {
-    _box = await Hive.openBox(_settingsBox);
+    if (_box == null || !_box!.isOpen) {
+      _box = await Hive.openBox(_settingsBox);
+    }
   }
 
   static SettingsState load() {
-    final raw = _box.get('settings') as Map?;
+    if (_box == null) return SettingsState.defaults();
+    final raw = _box!.get('settings') as Map?;
     if (raw == null) return SettingsState.defaults();
     return SettingsState.fromJson(Map<String, dynamic>.from(raw));
   }
 
   static Future<void> save(SettingsState state) async {
-    await _box.put('settings', state.toJson());
+    await ensureInitialized(); // Ensure box is open
+    await _box!.put('settings', state.toJson());
   }
 }
 
 class SettingsNotifier extends StateNotifier<SettingsState> {
+  final bool _isTest;
+  
   // Start with defaults to avoid touching Hive before Splash initializes it
-  SettingsNotifier() : super(SettingsState.defaults());
+  SettingsNotifier() : _isTest = false, super(SettingsState.defaults());
 
   // Private internal constructor for supplying a preset state (e.g., tests)
-  SettingsNotifier._withState(super.state);
+  SettingsNotifier._withState(super.state, this._isTest);
 
   // Named constructor used in tests to avoid touching Hive.
-  SettingsNotifier.test(SettingsState state) : this._withState(state);
+  SettingsNotifier.test(SettingsState state) : this._withState(state, true);
 
   // Replace state from bootstrap (splash) with a fully loaded SettingsState
   void replace(SettingsState newState) {
@@ -110,7 +117,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
   Future<void> toggleDarkMode(bool value) async {
     state = state.copyWith(darkMode: value);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 
   Future<void> toggleCategory(String category) async {
@@ -118,28 +125,28 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
         ? (state.enabledCategories.toSet()..remove(category))
         : (state.enabledCategories.toSet()..add(category));
     state = state.copyWith(enabledCategories: set);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 
   Future<void> setNotificationTime(TimeOfDay time) async {
     state = state.copyWith(notificationTime: time);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 
   Future<void> setNotificationsEnabled(bool value) async {
     state = state.copyWith(notificationsEnabled: value);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 
   Future<void> completeOnboarding() async {
     if (state.hasOnboarded) return;
     state = state.copyWith(hasOnboarded: true);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 
   Future<void> setReduceMotion(bool value) async {
     state = state.copyWith(reduceMotion: value);
-    await SettingsStore.save(state);
+    if (!_isTest) await SettingsStore.save(state);
   }
 }
 

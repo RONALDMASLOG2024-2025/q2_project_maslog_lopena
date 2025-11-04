@@ -8,6 +8,7 @@ class EcoTip extends Equatable {
   final EcoTipCategory category;
   final String? explanation; // optional local explanation
   final DateTime createdAt;
+  final String? source; // optional source attribution (e.g., "PCMag", "AI-Generated")
 
   const EcoTip({
     required this.id,
@@ -15,16 +16,18 @@ class EcoTip extends Equatable {
     required this.category,
     this.explanation,
     required this.createdAt,
+    this.source,
   });
 
-  EcoTip copyWith({String? explanation}) => EcoTip(
+  EcoTip copyWith({String? explanation, String? source}) => EcoTip(
         id: id,
         text: text,
         category: category,
         explanation: explanation ?? this.explanation,
         createdAt: createdAt,
+        source: source ?? this.source,
       );
 
   @override
-  List<Object?> get props => [id, text, category, explanation, createdAt];
+  List<Object?> get props => [id, text, category, explanation, createdAt, source];
 }

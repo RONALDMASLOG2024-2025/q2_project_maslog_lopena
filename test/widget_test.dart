@@ -8,8 +8,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:greenwise/features/settings/domain/settings_provider.dart';
 import 'package:greenwise/main.dart';
-import 'package:greenwise/settings/settings_provider.dart';
 
 class _FakeSettingsNotifier extends SettingsNotifier {
   _FakeSettingsNotifier()

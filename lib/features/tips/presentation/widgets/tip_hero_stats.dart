@@ -62,7 +62,7 @@ class _RingProgress extends StatefulWidget {
   @override State<_RingProgress> createState()=> _RingProgressState(); }
 
 class _RingProgressState extends State<_RingProgress> with SingleTickerProviderStateMixin {
-  late AnimationController _c = AnimationController(vsync:this,duration:GWDs.animSlow)..forward();
+  late final AnimationController _c = AnimationController(vsync:this,duration:GWDs.animSlow)..forward();
   double _oldVal=0;
   @override void didUpdateWidget(covariant _RingProgress old){super.didUpdateWidget(old); if(old.value!=widget.value){_oldVal=old.value; if(!widget.reduceMotion){_c..value=0..forward();} else {_c.value=1;}}}
   @override void dispose(){_c.dispose();super.dispose();}

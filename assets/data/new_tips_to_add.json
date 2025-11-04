@@ -1,0 +1,138 @@
+[
+  {
+    "id": "t121",
+    "text": "Restart your phone regularly to clear app caching and memory glitches.",
+    "category": "deviceCare",
+    "explanation": "Regular restarts clear accumulated issues like runaway caching, network connectivity problems, and memory leaks without requiring any deletions or configuration changes.",
+    "createdAt": "2025-05-01T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t122",
+    "text": "Enable Auto-Archive for unused Android apps to free space automatically.",
+    "category": "deviceCare",
+    "explanation": "Google Play's Auto Archive feature removes unused app data while keeping icons on your home screen, so you can restore apps anytime without losing them completely.",
+    "createdAt": "2025-05-02T00:00:00Z",
+    "source": "PCMag"
+  },
+  {
+    "id": "t123",
+    "text": "Use hibernation mode instead of sleep for extended laptop breaks.",
+    "category": "energySaving",
+    "explanation": "Hibernation saves your work and shuts down the laptop while using almost no power, making it ideal for breaks longer than an hour.",
+    "createdAt": "2025-05-03T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t124",
+    "text": "Calibrate your laptop battery every 2-3 months for accurate reporting.",
+    "category": "deviceCare",
+    "explanation": "Battery calibration involves a full discharge and recharge cycle that helps the battery reporting system maintain accuracy and optimal performance.",
+    "createdAt": "2025-05-04T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t125",
+    "text": "Set your screen to turn off after 1-2 minutes of inactivity.",
+    "category": "energySaving",
+    "explanation": "The display is one of the biggest power consumers—automatically turning it off during short breaks saves substantial energy throughout the day.",
+    "createdAt": "2025-05-05T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t126",
+    "text": "Check battery health reports monthly to catch issues early.",
+    "category": "deviceCare",
+    "explanation": "Regular battery diagnostics let you monitor capacity degradation and plan replacements before catastrophic failure disrupts your work.",
+    "createdAt": "2025-05-06T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t127",
+    "text": "Think twice before upgrading—do you really need a new device?",
+    "category": "ecoBuying",
+    "explanation": "Extending your current device's life by even one year prevents the mining of rare earth minerals and significantly reduces e-waste generation.",
+    "createdAt": "2025-05-07T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t128",
+    "text": "Take broken electronics to a repair cafe instead of replacing them.",
+    "category": "disposal",
+    "explanation": "Community repair cafes offer free fixes by volunteers, helping you avoid the environmental cost of mining new materials and manufacturing replacements.",
+    "createdAt": "2025-05-08T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t129",
+    "text": "Check if manufacturers offer take-back programs for old devices.",
+    "category": "disposal",
+    "explanation": "Many brands now accept old products for recycling or credit, ensuring proper material recovery that's more efficient than generic recycling facilities.",
+    "createdAt": "2025-05-09T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t130",
+    "text": "Never throw electronics in regular trash—find certified e-waste recyclers.",
+    "category": "disposal",
+    "explanation": "E-waste contains toxic substances like lead and mercury that leach into soil and water from landfills, harming ecosystems and human health.",
+    "createdAt": "2025-05-10T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t131",
+    "text": "Choose devices with modular, repairable designs when buying new.",
+    "category": "ecoBuying",
+    "explanation": "Modular electronics let you upgrade or replace individual components instead of discarding entire devices, dramatically extending product lifespan.",
+    "createdAt": "2025-05-11T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t132",
+    "text": "Demand products designed for recyclability from manufacturers.",
+    "category": "ecoBuying",
+    "explanation": "Consumer pressure for recyclable electronics forces manufacturers to adopt sustainable design practices and phase out products with planned obsolescence.",
+    "createdAt": "2025-05-12T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t133",
+    "text": "Remember your old phone contains precious metals—recycle to recover them.",
+    "category": "disposal",
+    "explanation": "Electronic devices contain gold, silver, copper, and cobalt. Recycling recovers these materials, reducing the need for destructive new mining operations.",
+    "createdAt": "2025-05-13T00:00:00Z",
+    "source": "Natural History Museum UK"
+  },
+  {
+    "id": "t134",
+    "text": "Unplug fully charged devices to avoid unnecessary heat buildup.",
+    "category": "energySaving",
+    "explanation": "Leaving devices plugged in after reaching 100% generates heat that degrades battery health and wastes standby power over time.",
+    "createdAt": "2025-05-14T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t135",
+    "text": "Don't leave laptops plugged in constantly—use battery power occasionally.",
+    "category": "energySaving",
+    "explanation": "Always being plugged in stresses the battery by keeping it at 100% charge continuously, which reduces its long-term capacity and lifespan.",
+    "createdAt": "2025-05-15T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t136",
+    "text": "Close apps running in background that you're not actively using.",
+    "category": "energySaving",
+    "explanation": "Background applications consume CPU cycles and RAM even when idle, continuously draining battery power without providing value.",
+    "createdAt": "2025-05-16T00:00:00Z",
+    "source": "LG Electronics"
+  },
+  {
+    "id": "t137",
+    "text": "Choose brands that publish transparent sustainability reports.",
+    "category": "ecoBuying",
+    "explanation": "Transparency signals genuine commitment to reducing emissions, using better materials, ensuring fair labor practices, and taking environmental responsibility.",
+    "createdAt": "2025-05-17T00:00:00Z",
+    "source": "Natural History Museum UK"
+  }
+]

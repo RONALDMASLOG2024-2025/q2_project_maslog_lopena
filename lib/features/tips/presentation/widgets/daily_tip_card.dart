@@ -1,6 +1,7 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:greenwise/data/models/eco_tip.dart';
-import 'dart:math' as math;
 
 class DailyTipCard extends StatelessWidget {
   final EcoTip tip;
@@ -31,8 +32,8 @@ class DailyTipCard extends StatelessWidget {
     final theme = Theme.of(context);
     final gradient = LinearGradient(
       colors: [
-        theme.colorScheme.surfaceVariant.withOpacity(0.9),
-        theme.colorScheme.primaryContainer.withOpacity(0.7),
+        theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.9),
+        theme.colorScheme.primaryContainer.withValues(alpha: 0.7),
       ],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
@@ -46,7 +47,7 @@ class DailyTipCard extends StatelessWidget {
         gradient: gradient,
         boxShadow: [
           BoxShadow(
-            color: theme.colorScheme.primary.withOpacity(0.08),
+            color: theme.colorScheme.primary.withValues(alpha: 0.08),
             blurRadius: 24,
             offset: const Offset(0, 8),
           ),
@@ -113,9 +114,9 @@ class _CategoryPill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.9),
+        color: color.withValues(alpha: 0.9),
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: theme.colorScheme.outline.withOpacity(0.2)),
+        border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.2)),
       ),
       child: Text(
         label,
@@ -153,7 +154,7 @@ class _ExplainButtonState extends State<_ExplainButton>
     final theme = Theme.of(context);
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.primaryContainer.withOpacity(0.65),
+        backgroundColor: theme.colorScheme.primaryContainer.withValues(alpha: 0.65),
         foregroundColor: theme.colorScheme.onPrimaryContainer,
         elevation: 0,
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
@@ -168,7 +169,7 @@ class _ExplainButtonState extends State<_ExplainButton>
           return Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.lightbulb_outline, color: theme.colorScheme.primary.withOpacity(0.7 + 0.3 * pulse)),
+              Icon(Icons.lightbulb_outline, color: theme.colorScheme.primary.withValues(alpha: 0.7 + 0.3 * pulse)),
               const SizedBox(width: 8),
               const Text('Why this matters'),
             ],
@@ -209,7 +210,7 @@ class _TipSkeletonState extends State<TipSkeleton> with SingleTickerProviderStat
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(28),
               gradient: LinearGradient(
-                colors: [theme.colorScheme.surfaceVariant, theme.colorScheme.surface],
+                colors: [theme.colorScheme.surfaceContainerHighest, theme.colorScheme.surface],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -224,9 +225,9 @@ class _TipSkeletonState extends State<TipSkeleton> with SingleTickerProviderStat
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Colors.white.withOpacity(0.0),
-                            Colors.white.withOpacity(0.25),
-                            Colors.white.withOpacity(0.0),
+                            Colors.white.withValues(alpha: 0.0),
+                            Colors.white.withValues(alpha: 0.25),
+                            Colors.white.withValues(alpha: 0.0),
                           ],
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
